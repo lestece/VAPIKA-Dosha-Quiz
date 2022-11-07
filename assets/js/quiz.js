@@ -180,3 +180,25 @@ const quizQuestions = [
 
     },
 ]
+
+//Variables for accessing and manipulating the DOM
+let currentQuestion = document.getElementById('current-question');
+let questionText = document.getElementById('question-text');
+let vataAnswer = document.getElementById('vata-option');
+let pittaAnswer = document.getElementById('pitta-option');
+let kaphaAnswer = document.getElementById('kapha-option');
+let prevButton = document.getElementById('btn-prev');
+let nextButton = document.getElementById('btn-next');
+
+//Starting conditions
+
+let vataPoints = 0;
+let pittaPoints = 0;
+let kaphaPoints = 0;
+
+//Functions
+
+function displayQuestions();
+
+function checkAnswer();
+
