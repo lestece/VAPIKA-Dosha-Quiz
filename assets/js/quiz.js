@@ -190,55 +190,64 @@ let kaphaAnswer = document.getElementById('kapha-option');
 let prevButton = document.getElementById('btn-prev');
 let nextButton = document.getElementById('btn-next');
 
-//Starting conditions
+// QUIZ FUNCTIONALITY
+
+// Starting conditions
 let currentQuestion = 0;
-let questionsIndex=0;
+let i = 0;
 let vataPoints = 0;
 let pittaPoints = 0;
 let kaphaPoints = 0;
 
-//Functions
 
-function startQuiz(){
-    /**
-     * Display the first counter,
-     * the first question of the array of quizQuestions
-     * and the correspondent set of answers in the 
-     * relative dosha containers
-     */
-    currentQuestion+=1;
-    currentQuestionCounter.textContent = currentQuestion;
-    questionText.textContent = quizQuestions[questionsIndex].question;
-    vataAnswer.textContent = quizQuestions[questionsIndex].answers.v;
-    pittaAnswer.textContent = quizQuestions[questionsIndex].answers.p;
-    kaphaAnswer.textContent = quizQuestions[questionsIndex].answers.k;
-    checkAnswer();
+
+// function to display the questions
+function displayQuestions() {
+    currentQuestion +=1;
+    currentQuestionCounter.innerText = currentQuestion;
+    questionText.innerText = quizQuestions[i].question;
+    vataAnswer.innerText = quizQuestions[i].answers.v;
+    pittaAnswer.innerText = quizQuestions[i].answers.p;
+    kaphaAnswer.innerText = quizQuestions[i].answers.k;
+    i++;
+
 }
-startQuiz();
+displayQuestions();
+
+
 
 //Function that checks the selected answer and adds points to the related dosha
-function checkAnswer(){
-    /**
-     * Iterates through the button elements to check
-     * if an answer has been selected and if so,
-     * it increments the points of the dosha related to that answer
-     */
-let buttons = document.getElementsByTagName("button");
+    function checkAnswer(){
+        /**
+         * Iterates through the button elements to check
+         * if an answer has been selected and if so,
+         * it increments the points of the dosha related to that answer
+         * or if the next or previous question buttons have been clicked
+         * and reacting accordingly
+         */
+    let buttons = document.getElementsByTagName("button");
 
-for (let button of buttons) {
-    button.addEventListener("click", function() {
-        // Dosha points increment
-        if (this.getAttribute("id") === "vata-option") {
-            vataPoints++;
-            alert(vataPoints);
-        } else if (this.getAttribute("id") === "pitta-option") {
-            pittaPoints++;
-            alert(pittaPoints);
-        } else if(this.getAttribute("id") === "kapha-option") {
-            kaphaPoints++;
-            alert(kaphaPoints);
-        } // Add functionalities for previous and next buttons
-        
-        
-       
-})}};
+    for (let button of buttons) {
+        button.addEventListener("click", function() {
+            // Dosha points increment
+            if (this.getAttribute("id") === "vata-option") {
+                vataPoints++;
+            } else if (this.getAttribute("id") === "pitta-option") {
+                pittaPoints++;
+            } else if(this.getAttribute("id") === "kapha-option") {
+                kaphaPoints++;
+            } // Add functionalities for previous and next buttons
+            
+
+            // Checks if there's still questions to be answered
+            if (currentQuestion<quizQuestions.length){
+                displayQuestions();
+            } else {
+                alert(`Quiz completed. You are ${vataPoints} Vata, ${pittaPoints} Pitta and ${kaphaPoints} Kapha`);
+            }
+            
+            
+           
+    })}};
+
+    checkAnswer();
