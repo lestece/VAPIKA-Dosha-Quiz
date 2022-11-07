@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Sen&family=Tenor+Sans&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: "Sen", sans-serif;
+  font-size: 1.7em;
+  /* background: #E7E8EA url(../images/background-desktop.png) no-repeat 20% 90%; */
+  background-size: cover;
+}
+
+header {
+  text-align: center;
+}
+
+#logo {
+  width: 8rem;
+}
+
+.main-container {
+  width: 55%;
+  padding: 2rem;
+  text-align: center;
+}
+
+h1 {
+  font-family: "Tenor Sans", sans-serif;
+  color: #9f7e74;
+}
+
+p {
+  line-height: 3rem;
+}
+
+button {
+  background-color: #9f7e74;
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  font-family: "Tenor Sans", sans-serif;
+}
+
+#start-quiz {
+    display: block;
+    font-size: 2.2rem;
+    margin: 1rem auto;
+  }
+  
+  footer {
+    background-color: #9f7e74;
+    padding: 1rem 3rem;
+    /* position: fixed;
+      bottom: 0;
+      width: 100%; */
+  }
+  
+  footer i {
+    color: #e7e8ea;
+  }
+  
+  .social-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
