@@ -204,7 +204,7 @@ function startQuiz(){
      * Display the first counter,
      * the first question of the array of quizQuestions
      * and the correspondent set of answers in the 
-     * proper dosha containers
+     * relative dosha containers
      */
     currentQuestion+=1;
     currentQuestionCounter.textContent = currentQuestion;
@@ -212,6 +212,33 @@ function startQuiz(){
     vataAnswer.textContent = quizQuestions[questionsIndex].answers.v;
     pittaAnswer.textContent = quizQuestions[questionsIndex].answers.p;
     kaphaAnswer.textContent = quizQuestions[questionsIndex].answers.k;
-
+    checkAnswer();
 }
 startQuiz();
+
+//Function that checks the selected answer and adds points to the related dosha
+function checkAnswer(){
+    /**
+     * Iterates through the button elements to check
+     * if an answer has been selected and if so,
+     * it increments the points of the dosha related to that answer
+     */
+let buttons = document.getElementsByTagName("button");
+
+for (let button of buttons) {
+    button.addEventListener("click", function() {
+        // Dosha points increment
+        if (this.getAttribute("id") === "vata-option") {
+            vataPoints++;
+            alert(vataPoints);
+        } else if (this.getAttribute("id") === "pitta-option") {
+            pittaPoints++;
+            alert(pittaPoints);
+        } else if(this.getAttribute("id") === "kapha-option") {
+            kaphaPoints++;
+            alert(kaphaPoints);
+        } // Add functionalities for previous and next buttons
+        
+        
+       
+})}};
