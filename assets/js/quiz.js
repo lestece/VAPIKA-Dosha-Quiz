@@ -182,7 +182,7 @@ const quizQuestions = [
 ]
 
 //Variables for accessing and manipulating the DOM
-let currentQuestion = document.getElementById('current-question');
+let currentQuestionCounter = document.getElementById('current-question');
 let questionText = document.getElementById('question-text');
 let vataAnswer = document.getElementById('vata-option');
 let pittaAnswer = document.getElementById('pitta-option');
@@ -191,14 +191,27 @@ let prevButton = document.getElementById('btn-prev');
 let nextButton = document.getElementById('btn-next');
 
 //Starting conditions
-
+let currentQuestion = 0;
+let questionsIndex=0;
 let vataPoints = 0;
 let pittaPoints = 0;
 let kaphaPoints = 0;
 
 //Functions
 
-function displayQuestions();
+function startQuiz(){
+    /**
+     * Display the first counter,
+     * the first question of the array of quizQuestions
+     * and the correspondent set of answers in the 
+     * proper dosha containers
+     */
+    currentQuestion+=1;
+    currentQuestionCounter.textContent = currentQuestion;
+    questionText.textContent = quizQuestions[questionsIndex].question;
+    vataAnswer.textContent = quizQuestions[questionsIndex].answers.v;
+    pittaAnswer.textContent = quizQuestions[questionsIndex].answers.p;
+    kaphaAnswer.textContent = quizQuestions[questionsIndex].answers.k;
 
-function checkAnswer();
-
+}
+startQuiz();
