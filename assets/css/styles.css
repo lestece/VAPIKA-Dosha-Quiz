@@ -138,3 +138,34 @@ button {
     color: #e7e8ea;
   }
   
+  /* Sign up page styles*/
+
+.sign-up-container {
+  padding: 2rem 3rem;
+  margin-bottom: 2rem;
+}
+
+#sign-up-heading {
+  color: #e7e8ea;
+  margin-bottom: 2rem;
+}
+
+#sign-up-p {
+  color: black;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+}
+
+.signup-form input,
+.signup-form textarea {
+  display: block;
+  margin: 1rem auto;
+  padding: 0.8rem;
+  text-align: center;
+}
+
+.sign-up-container .btn {
+  background-color: #e7e8ea;
+  color: #9f7e74;
+  margin-top: 1rem;
+}
