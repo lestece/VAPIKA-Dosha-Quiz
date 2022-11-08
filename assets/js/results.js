@@ -6,4 +6,7 @@ let vataPoints = localStorage.getItem('vataPoints');
 let pittapoints = localStorage.getItem('pittaPoints');
 let kaphaPoints = localStorage.getItem('kaphaPoints');
 let dosha = localStorage.getItem('dosha');
-console.log(vataPoints, pittapoints, kaphaPoints, dosha);
+
+//DOM access and initial conditions
+document.getElementById('dosha-result').textContent = dosha;
+

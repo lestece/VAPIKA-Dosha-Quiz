@@ -63,41 +63,42 @@
     <script src="https://kit.fontawesome.com/1705e36da1.js" crossorigin="anonymous"></script>
     <!-- EmailJS script -->
     <!-- Inspired by the tutorial at https://martinezjf2.medium.com/how-to-setup-emailjs-33809350f0f8 -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
-    </script>
-    <!-- Connect to my EmailJS account using my Public Key -->
-    <script>
-        (function () {
-            emailjs.init("-nc1aZVdy7YoJikvg");
-        })();</script>
-    <!--Function to call the emailjs.sendForm method -->
-    <script>
-        function sendMail() {
-            document.getElementById('signup-form').addEventListener('submit', function (event) {
-                event.preventDefault();
-                //Method provided within the emailJS documentation at https://www.emailjs.com/docs/sdk/send-form/
-                emailjs.sendForm('service_6z74g5e', "template_h7twzk8", '#signup-form').then(function () {
-                    console.log('SUCCESS');
-                    //Get the button element
-                    let subscribe = document.getElementById('signup-btn');
-                    //Get the sign up form
-                    let signupForm = document.getElementById('signup-form');
-                    //reset will clear the form
-                    signupForm.reset();
-                    //Underneath will change the html of the button if successfully sent
-                    window.location = "../quiz-results.html";
-                    //If there's an error, it will log "Failed..." and console log the error
-                }, function (error) {
-                    console.log('FAILED...', error)
-                });
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<!-- Connect to my EmailJS account using my Public Key -->
+<script>
+    (function () {
+        emailjs.init("-nc1aZVdy7YoJikvg");
+    })();</script>
+<!--Function to call the emailjs.sendForm method -->
+<script>
+    function sendMail() {
+        document.getElementById('signup-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+            //Method provided within the emailJS documentation at https://www.emailjs.com/docs/sdk/send-form/
+            emailjs.sendForm('service_6z74g5e', "template_h7twzk8", '#signup-form').then(function () {
+                console.log('SUCCESS');
+                //Get the button element
+                let subscribe = document.getElementById('signup-btn');
+                //Get the sign up form
+                let signupForm = document.getElementById('signup-form');
+                //reset will clear the form
+                signupForm.reset();
+                //Underneath will change the html of the button if successfully sent
+                window.location = "../quiz-results.html";
+                //If there's an error, it will log "Failed..." and console log the error
+            }, function (error) {
+                console.log('FAILED...', error)
             });
-        }
+        });
+    }
     </script>
     <script>
         //Script for "go to results page" button 
-        document.getElementById("results-btn").addEventListener("click", function () {
-            window.location = "../quiz-results.html";
-        });
+document.getElementById("results-btn").addEventListener("click", function () {
+  window.location = "../quiz-results.html";
+});
     </script>
 
 

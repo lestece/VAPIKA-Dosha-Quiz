@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,68 +12,71 @@
     <link rel="stylesheet" href="assets/css/styles.css" />
 
     <title>VAPIKA Dosha Quiz</title>
-  </head>
+</head>
 
-  <body>
+<body>
     <!-- Header containing logo -->
     <header>
-      <a href="index.html">
-        <img src="assets/images/vapika-logo.png" alt="vapika logo" id="logo"
-      /></a>
+        <a href="index.html">
+            <img src="assets/images/vapika-logo.png" alt="vapika logo" id="logo" /></a>
     </header>
 
     <main>
-      <div class="container" id="results-container">
-        <h1 id="results-heading">
-          <span id="name"></span>
-          your Dosha is <span id="dosha"></span>!
-        </h1>
-        <p id="results-p">Click on the chart to learn more about your dosha!</p>
-        <div id="chart_div"></div>
-      </div>
+        <div class="container" id="results-container">
+            <h1 id="results-heading">
+                <span id="name"></span>
+                your Dosha is <span id="dosha-result"></span>!
+            </h1>
+            <p id="results-p">Click on the chart to learn more about your dosha!</p>
+            <div id="piechart"></div>
+        </div>
     </main>
 
     <!-- Footer containing social media buttons -->
     <footer>
-      <div class="social-container">
-        <a
-          href="https://www.facebook.com/"
-          target="_blank"
-          rel="noopener"
-          aria-label="Visit our Facebook page (opens in a new tab)"
-        >
-          <i class="fab fa-facebook-f"></i
-        ></a>
-        <a
-          href="https://www.instagram.com/"
-          target="_blank"
-          rel="noopener"
-          aria-label="Visit our Instagram page (opens in a new tab)"
-          ><i class="fab fa-instagram"></i
-        ></a>
-        <a
-          href="https://twitter.com/"
-          target="_blank"
-          rel="noopener"
-          aria-label="Visit our Twitter page (opens in a new tab)"
-          ><i class="fab fa-twitter"></i
-        ></a>
-        <a
-          href="https://tiktok.com/"
-          target="_blank"
-          rel="noopener"
-          aria-label="Visit our Twitter page (opens in a new tab)"
-          ><i class="fab fa-tiktok"></i
-        ></a>
-      </div>
+        <div class="social-container">
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener"
+                aria-label="Visit our Facebook page (opens in a new tab)">
+                <i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener"
+                aria-label="Visit our Instagram page (opens in a new tab)"><i class="fab fa-instagram"></i></a>
+            <a href="https://twitter.com/" target="_blank" rel="noopener"
+                aria-label="Visit our Twitter page (opens in a new tab)"><i class="fab fa-twitter"></i></a>
+            <a href="https://tiktok.com/" target="_blank" rel="noopener"
+                aria-label="Visit our Twitter page (opens in a new tab)"><i class="fab fa-tiktok"></i></a>
+        </div>
     </footer>
 
     <!-- fontawesome script for social media icons -->
-    <script
-      src="https://kit.fontawesome.com/1705e36da1.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://kit.fontawesome.com/1705e36da1.js" crossorigin="anonymous"></script>
+    <!-- Google charts script -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', { 'packages': ['corechart'] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+
+            var data = google.visualization.arrayToDataTable([
+                ['Dosha', 'Percentage'],
+                ['Vata', 11],
+                ['Pitta', 2],
+                ['Kapha', 2]
+            ]);
+
+            var options = {
+                title: 'Dosha percentages',
+                width: 400,
+                height: 300,
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+            chart.draw(data, options);
+        }
+    </script>
     <!-- js script -->
     <script src="assets/js/results.js"></script>
-  </body>
+</body>
+
 </html>
