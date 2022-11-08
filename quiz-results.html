@@ -91,17 +91,18 @@
             var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
             chart.draw(data, options);
 
-            // google.visualization.events.addListener(chart, 'click', clickHandler);
+            google.visualization.events.addListener(chart, 'select', function (e) {
+                var selection = chart.getSelection();
+                
+                if (selection[0].row === 0){
+                    alert('You selected Vata!')
+                } else if (selection[0].row === 1){
+                    alert('You selected Pitta!')
+                } else {
+                    alert('You selected Kapha!')
+                }
 
-            // function clickHandler(e) {
-            //     if (data.)
-            //     alert('A table row was clicked');
-            // }
-            google.visualization.events.addListener(chart, 'select', function(e) {
-        var selection = chart.getSelection();
-        console.log(selection[0].row)
-
-    });
+            });
         }
     </script>
     <!-- js script -->
