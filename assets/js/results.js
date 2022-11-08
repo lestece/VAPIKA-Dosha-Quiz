@@ -5,4 +5,5 @@
 let vataPoints = localStorage.getItem('vataPoints');
 let pittapoints = localStorage.getItem('pittaPoints');
 let kaphaPoints = localStorage.getItem('kaphaPoints');
-console.log(vataPoints, pittapoints, kaphaPoints);
+let dosha = localStorage.getItem('dosha');
+console.log(vataPoints, pittapoints, kaphaPoints, dosha);

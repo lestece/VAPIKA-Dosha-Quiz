@@ -244,9 +244,8 @@ displayQuestions();
             if (currentQuestion<quizQuestions.length){
                 displayQuestions();
             } else {
-                /**
-                 * Stores the doshas points in the local storage
-                 */
+                calculateDosha(vataPoints, pittaPoints, kaphaPoints);
+                //Stores the dosha points in the local storage
                 localStorage.setItem('vataPoints', vataPoints);
                 localStorage.setItem('pittaPoints', pittaPoints);
                 localStorage.setItem('kaphaPoints', kaphaPoints);
@@ -299,4 +298,6 @@ displayQuestions();
         else {
             dosha = "Tridoshic";
         }
+        //Store the dosha in the local storage
+        localStorage.setItem('dosha', dosha);
     }
