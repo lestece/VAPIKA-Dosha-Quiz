@@ -62,15 +62,17 @@
     <!-- fontawesome script for social media icons -->
     <script src="https://kit.fontawesome.com/1705e36da1.js" crossorigin="anonymous"></script>
     <!-- EmailJS script -->
+    <!-- Inspired by the tutorial at https://martinezjf2.medium.com/how-to-setup-emailjs-33809350f0f8 -->
     <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
 </script>
-<script>// Connect to my EmailJS account using my Public Key
+<!-- Connect to my EmailJS account using my Public Key -->
+<script>
     (function () {
         emailjs.init("-nc1aZVdy7YoJikvg");
     })();</script>
-
-<script>//  Function to call the emailjs.sendForm method
+<!--Function to call the emailjs.sendForm method -->
+<script>
     function sendMail() {
         document.getElementById('signup-form').addEventListener('submit', function (event) {
             event.preventDefault();
@@ -84,7 +86,7 @@
                 //reset will clear the form
                 signupForm.reset();
                 //Underneath will change the html of the button if successfully sent
-                subscribe.innerHTML = "Successfully subscribed!";
+                window.location = "../quiz-results.html";
                 //If there's an error, it will log "Failed..." and console log the error
             }, function (error) {
                 console.log('FAILED...', error)
