@@ -169,3 +169,9 @@ button {
   color: #9f7e74;
   margin-top: 1rem;
 }
+
+/* Results page */
+
+ #results-container h1 {
+  color: #e7e8ea;
+}

@@ -50,3 +50,4 @@ window.onclick = function (event) {
     instructionsModal.style.display = "none";
   }
 };
+

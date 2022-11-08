@@ -243,6 +243,12 @@ displayQuestions();
             if (currentQuestion<quizQuestions.length){
                 displayQuestions();
             } else {
+                /**
+                 * Stores the doshas points in the local storage
+                 */
+                localStorage.setItem('vataPoints', vataPoints);
+                localStorage.setItem('pittaPoints', pittaPoints);
+                localStorage.setItem('kaphaPoints', kaphaPoints);
                 window.location = "../sign-up.html";
             }
             
@@ -251,3 +257,6 @@ displayQuestions();
     })}};
 
     checkAnswer();
+
+    
+    
