@@ -198,6 +198,7 @@ let i = 0;
 let vataPoints = 0;
 let pittaPoints = 0;
 let kaphaPoints = 0;
+let dosha;
 
 
 
@@ -258,5 +259,44 @@ displayQuestions();
 
     checkAnswer();
 
-    
-    
+    // Function to calculate the Dosha
+    function calculateDosha(v,p,k){
+        //If Vata is the dominant dosha
+        if ((v > p) && (v > k)){
+            if (p > k){
+                dosha = "Vata - Pitta";
+            } else if (k > p) {
+                dosha = "Vata - Kapha";
+            } else {
+                dosha = "Vata";
+            }
+            //If Pitta is the dominant dosha
+        } else if((p > v) && (p > k)){
+            if (v > k){
+                dosha = "Pitta - Vata";
+            } else if (k > v){
+                dosha = "Pitta - Kapha";
+            } else {
+                dosha = "Pitta";
+            }
+        //If Kapha is the dominant dosha
+        } else if (( k > v) && (k > p )){
+            if (v > p){
+                dosha = "Kapha - Vata";
+            } else if(p > v){
+                dosha = "Kapha - Vata";
+            } else {
+                dosha = "Kapha";
+            }
+        } //If two doshas score the same points
+        else if (v === p){
+            dosha = "Vata - Pitta";
+        } else if (p === k){
+            dosha = "Pitta - Kapha";
+        } else if (k === v){
+            dosha = "Kapha - Vata";
+        } //If all of the three doshas score the same points
+        else {
+            dosha = "Tridoshic";
+        }
+    }
