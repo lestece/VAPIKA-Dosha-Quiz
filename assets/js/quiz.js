@@ -243,7 +243,7 @@ displayQuestions();
             if (currentQuestion<quizQuestions.length){
                 displayQuestions();
             } else {
-                alert(`Quiz completed. You are ${vataPoints} Vata, ${pittaPoints} Pitta and ${kaphaPoints} Kapha`);
+                window.location = "../sign-up.html";
             }
             
             
