@@ -28,7 +28,7 @@
                 your Dosha is <span id="dosha-result"></span>!
             </h1>
             <p id="results-p">Click on the chart to learn more about your dosha!</p>
-            <div id="piechart"></div>
+            <div id="chart_div"></div>
         </div>
     </main>
 
@@ -50,30 +50,43 @@
     <!-- fontawesome script for social media icons -->
     <script src="https://kit.fontawesome.com/1705e36da1.js" crossorigin="anonymous"></script>
     <!-- Google charts script -->
+    <!--Load the AJAX API-->
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
-        google.charts.load('current', { 'packages': ['corechart'] });
-        google.charts.setOnLoadCallback(drawChart);
 
-        function drawChart() {
+      // Load the Visualization API and the corechart package.
+      google.charts.load('current', {'packages':['corechart']});
 
-            var data = google.visualization.arrayToDataTable([
-                ['Dosha', 'Percentage'],
-                ['Vata', 11],
-                ['Pitta', 2],
-                ['Kapha', 2]
-            ]);
+      // Set a callback to run when the Google Visualization API is loaded.
+      google.charts.setOnLoadCallback(drawChart);
 
-            var options = {
-                title: 'Dosha percentages',
-                width: 400,
-                height: 300,
-            };
+      // Callback that creates and populates a data table,
+      // instantiates the pie chart, passes in the data and
+      // draws it.
+      function drawChart() {
 
-            var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+        // Create the data table.
+        var data = new google.visualization.DataTable();
+        let vataPoints = parseInt(localStorage.getItem('vataPoints'));
+        let pittaPoints = parseInt(localStorage.getItem('pittaPoints'));
+        let kaphaPoints = parseInt(localStorage.getItem('kaphaPoints'));
+        data.addColumn('string', 'Dosha');
+        data.addColumn('number', 'Percentage');
+        data.addRows([
+          ['Vata', vataPoints],
+          ['Pitta', pittaPoints],
+          ['Kapha', kaphaPoints],
+        ]);
 
-            chart.draw(data, options);
-        }
+        // Set chart options
+        var options = {'title':'Your Dosha percentages',
+                       'width':400,
+                       'height':300};
+
+        // Instantiate and draw our chart, passing in some options.
+        var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
     </script>
     <!-- js script -->
     <script src="assets/js/results.js"></script>
