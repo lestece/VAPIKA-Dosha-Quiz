@@ -23,20 +23,20 @@
 
     <main>
         <div class="container sign-up-container">
-            <form method="" action="" class="signup-form">
+            <form method="" action="" class="signup-form" id="signup-form">
                 <h1 id="sign-up-heading">Thank you for completing the quiz!</h1>
                 <p id="sign-up-p">
                     Before being redirected to your result, please sign up to our
                     newsletter to receive monthly tips and recommendations specifically
                     tailored to your Dosha.
                 </p>
-                <input type="text" id="fname" name="full-name" required class="text-input"
-                    placeholder="Your full name" />
+                <input type="text" id="user-name" name="user-name" required class="text-input"
+                    placeholder="Your name" />
                 <input type="email" id="email" name="email_address" required class="text-input"
                     placeholder="Your email address" />
                 <textarea id="feedback" name="feedback" rows="4" cols="50"
                     placeholder="leave us a feedback..."></textarea>
-                <button class="btn" id="signup-btn">Sign up</button>
+                <button class="btn" id="signup-btn" onclick='sendMail()'>Sign up</button>
             </form>
             <button class="btn" id="results-btn">
                 Skip and go to your quiz result
@@ -61,6 +61,12 @@
 
     <!-- fontawesome script for social media icons -->
     <script src="https://kit.fontawesome.com/1705e36da1.js" crossorigin="anonymous"></script>
+    <!-- EmailJS script -->
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+    <script src="sign-up.js"></script>
+
 </body>
 
 </html>
