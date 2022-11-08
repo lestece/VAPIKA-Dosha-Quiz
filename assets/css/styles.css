@@ -175,3 +175,13 @@ button {
  #results-container h1 {
   color: #e7e8ea;
 }
+
+#chart_div{
+  width: 50%;
+  margin: 0 auto;
+  
+}
+
+#chart_div *{
+  font-family: "Tenor Sans", sans-serif;
+}
