@@ -181,6 +181,15 @@ const quizQuestions = [
     },
 ]
 
+/**
+ * The number of questions is dinamically saved into the
+ * local storage so that it can be retrieved in the results script
+ * for calculatuing the percentages
+ */
+let numOfQuestions = quizQuestions.length;
+localStorage.setItem('numOfQuestions', numOfQuestions);
+console.log(numOfQuestions);
+
 //Variables for accessing and manipulating the DOM
 let currentQuestionCounter = document.getElementById('current-question');
 let questionText = document.getElementById('question-text');
