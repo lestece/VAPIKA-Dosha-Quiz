@@ -252,16 +252,17 @@ nextButton.addEventListener('click', function () {
         vataPoints++;
         //deselects answers and goes to the next question
         deselectAnswers();
-        displayQuestions();
+        checkEndQuiz();
     } else if (pittaAnswer.classList.contains('selected-answer')) {
         pittaPoints++;
         deselectAnswers();
-        displayQuestions();
+        checkEndQuiz();
     } else if (kaphaAnswer.classList.contains('selected-answer')) {
         kaphaPoints++;
         deselectAnswers();
-        displayQuestions();
+        checkEndQuiz();
     } else {
+        //Make sure that an answer is selected
         alert('please select an answer!');
     }
     
@@ -274,35 +275,19 @@ function deselectAnswers(){
     kaphaAnswer.classList.remove("selected-answer");
 }
 
-
-//Function that checks the selected answer and adds points to the related dosha
-function checkAnswer() {
-    /**
-     * Iterates through the button elements to check
-     * if an answer has been selected and if so,
-     * it increments the points of the dosha related to that answer
-     * or if the next or previous question buttons have been clicked
-     * and reacting accordingly
-     */
-
-
-    // // Checks if there's still questions to be answered
-    // if (currentQuestion<quizQuestions.length){
-    //     displayQuestions();
-    // } else {
-    //     calculateDosha(vataPoints, pittaPoints, kaphaPoints);
-    //     //Stores the dosha points in the local storage
-    //     localStorage.setItem('vataPoints', vataPoints);
-    //     localStorage.setItem('pittaPoints', pittaPoints);
-    //     localStorage.setItem('kaphaPoints', kaphaPoints);
-    //     window.location = "../sign-up.html";
-    // }
-
-
-
-};
-
-checkAnswer();
+// Function that checks if there's still questions to be answered
+function checkEndQuiz(){
+    if (currentQuestion<quizQuestions.length){
+        displayQuestions();
+    } else {
+        calculateDosha(vataPoints, pittaPoints, kaphaPoints);
+        //Stores the dosha points in the local storage
+        localStorage.setItem('vataPoints', vataPoints);
+        localStorage.setItem('pittaPoints', pittaPoints);
+        localStorage.setItem('kaphaPoints', kaphaPoints);
+        window.location = "../sign-up.html";
+    }
+}
 
 // Function to calculate the Dosha
 function calculateDosha(v, p, k) {
