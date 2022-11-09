@@ -45,7 +45,7 @@ p {
 
 
 .modal-btn {
-    margin: 1rem;
+    margin: 2rem 1rem;
   }
   
   /* Styles for learn more and instructions buttons modal windows */
@@ -66,16 +66,32 @@ p {
   .modal-content {
     background-color: #e7e8ea;
     margin: 0 auto; /* 15% from the top and centered */
-    padding: 20px;
+    padding: 2rem 5rem;
     border: 1px solid #888;
     width: 80%; /* Could be more or less, depending on screen size */
   }
+
+  .modal-content h1{
+    margin: 7rem 0 3rem;
+  }
+
+  /* Modal close btn */
+  .close-modal-btn-box{
+    background-color: #9f7e74;
+    color: #E7E8EA;
+    float: right;
+    font-size: 3rem;
+    width: 60px;
+    cursor: pointer;
+  }
+
 
 button {
   background-color: #9f7e74;
   padding: 1rem 2rem;
   text-transform: uppercase;
   font-family: "Tenor Sans", sans-serif;
+  cursor: pointer;
 }
 
 #start-quiz {
@@ -253,6 +269,10 @@ button {
     margin-top: 3rem;
   }
 
+  .modal-content{
+    padding: 1rem 2rem;
+  }
+
 }
 
 @media only screen and (max-width: 400px) {
@@ -266,6 +286,10 @@ button {
 
   #start-quiz{
     font-size:1.4rem;
+  }
+
+  .modal-content h1{
+    font-size: 2rem;
   }
 }
 

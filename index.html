@@ -31,7 +31,9 @@
             <!-- Modal for learn more button -->
             <div id="learn-more-modal" class="modal">
                 <div class="modal-content">
-                    <span class="close close-learn-more">&times;</span>
+                    <div class="close-modal-btn-box">
+                        <span class="close close-learn-more">&times;</span>
+                    </div>
                     <h1>Ayurveda Fundamentals</h1>
                     <p>Ayurveda is an ancient holistic healing system developed in India more than 3,000 years ago.
                         It's based on the principle that the 5 elements - earth, fire, water, air and space - found in the Universe also exist within our bodies. They combine in varying degrees to form the so-called "doshas" (also known as energetic forces of nature or functional principles): they are Vata (Air and Space), Pitta (Fire and Water) and Kapha (Water and Earth).
@@ -44,7 +46,10 @@
             <!-- Modal for instructions button -->
             <div id="instructions-modal" class="modal">
                 <div class="modal-content">
-                    <span class="close close-instructions">&times;</span>
+                    <div class="close-modal-btn-box">
+                        <span class="close close-instructions">&times;</span>
+                    </div>
+                    
                     <h1>How to take the test & what to do with the results</h1>
                     <ol>
                         <li>Read each question carefully and choose the answer that best describes you.</li>
@@ -55,7 +60,7 @@
                   </div>
             </div>
             <!-- button that takes to the quiz when clicked -->
-            <a href="dosha-quiz.html" id="start-quiz">Take the quiz</a>
+            <button onclick="window.location.href ='dosha-quiz.html'" id="start-quiz">Take the quiz</button>
         </div>
     </main>
 
