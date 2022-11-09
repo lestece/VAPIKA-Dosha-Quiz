@@ -87,7 +87,7 @@
                 //reset will clear the form
                 signupForm.reset();
                 //If the form is successfully sent, it
-                localStorage.setItem('userName', userName);
+                sessionStorage.setItem('userName', userName);
                 window.location = "../quiz-results.html";
                 //If there's an error, it will log "Failed..." and console log the error
             }, function (error) {
