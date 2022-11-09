@@ -33,8 +33,59 @@
             <div id="vata-modal" class="modal" style="color: black;">
                 <div class="modal-content">
                     <span class="close close-vata">&times;</span>
+                    <img src="assets/images/vata.png" alt="Vata elements">
                     <h1 style="color: black;">Vata</h1>
-                    <p>Vata content</p>
+                    <p>The Vata dosha is responsible for communication, movement and elimination of all wastes from the
+                        body.
+                        <br>
+                        Vata types find it hard to sit still and have wild imaginations. They may be more fearful ad
+                        anxious of everyday things than others and tend to be light sleepers. Vatas suffer under stress
+                        and are greatly affected by the moods of those around them. When things get overwhelming for
+                        them, they may just drift off into their minds where things are more comfortable for them.
+                        <br>
+                        This dosha is drawn to the spiritual and seeks out more esoteric experiences than the other two
+                        doshas. It can be shy, insecure and awkward in social situations and one of the biggest
+                        challenges is to come to a place of self-acceptance.
+                    </p>
+                    <h2>Elements</h2>
+                    <p>Earth, Fire and Water are the elements that calm this dosha. It's also recommended to avoid
+                        bitter, pungent and astringent tastes that aggravate Vata, having the more balancing sweet, sour
+                        and salty tastes instead.</p>
+                    <h2>Signs of Imbalance & Triggers</h2>
+                    <p>Symptoms usually appear first in the gut or the mind. An imbalanced Vata can complain an upset
+                        tummy, constipation, experience anxiety, weight loss, restlessness, fatigue, insomnia,
+                        hypertension, inability to concentrate, tremors or a nervous system disorder. Other indicators
+                        are dry cracked skin and lips, arthritis and joint pain.</p>
+                    <br>
+                    Triggers for a Vata imbalance are:
+                    <ul>
+                        <li>eating too much cold, icy foods and drinks (especially whatever produces gas in the body)</li>
+                        <li>excess raw food</li>
+                        <li>irregular meals or skipping meals</li>
+                        <li>too much travel</li>
+                        <li>being outside in the cold and wind</li>
+                        <li>lack of sleep and routine</li>
+                        <li>spending too much time in front of the computer and TV</li>
+                        <li>stress</li>
+                    </ul>
+                    <h2>Balancing Vata</h2>
+                    <p>Gentle calming exercise such as yoga, quigung, dance, golf, walking, swimming, listening to calming music, gardening, pottery, cooking, massage, mediation and getting to bed early, ghee added to food and drinks, drinking warm milky drinks with cardamom and cinnamon</p>
+                </div>
+            </div>
+            <!-- Modal for Pitta Dosha -->
+            <div id="pitta-modal" class="modal" style="color: black;">
+                <div class="modal-content">
+                    <span class="close close-pitta">&times;</span>
+                    <h1 style="color: black;">Pitta</h1>
+                    <p>Pitta content</p>
+                </div>
+            </div>
+            <!-- Modal for Kapha Dosha -->
+            <div id="kapha-modal" class="modal" style="color: black;">
+                <div class="modal-content">
+                    <span class="close close-kapha">&times;</span>
+                    <h1 style="color: black;">Kapha</h1>
+                    <p>Kapha content</p>
                 </div>
             </div>
         </div>
@@ -103,7 +154,6 @@
                 var selection = chart.getSelection();
 
                 if (selection[0].row === 0) {
-                    // alert('You selected Vata!')
                     // Get the modal
                     let vataModal = document.getElementById("vata-modal");
                     //Open the modal
@@ -113,12 +163,29 @@
                     // When the user clicks on <span> (x), close the modal
                     closeVata.onclick = function () {
                         vataModal.style.display = "none";
-                    
                     };
                 } else if (selection[0].row === 1) {
-                    alert('You selected Pitta!')
+                    // Get the modal
+                    let pittaModal = document.getElementById("pitta-modal");
+                    //Open the modal
+                    pittaModal.style.display = "block";
+                    // Get the <span> element that closes the modal
+                    let closePitta = document.getElementsByClassName("close-pitta")[0];
+                    // When the user clicks on <span> (x), close the modal
+                    closePitta.onclick = function () {
+                        pittaModal.style.display = "none";
+                    };
                 } else {
-                    alert('You selected Kapha!')
+                    // Get the modal
+                    let kaphaModal = document.getElementById("kapha-modal");
+                    //Open the modal
+                    kaphaModal.style.display = "block";
+                    // Get the <span> element that closes the modal
+                    let closeKapha = document.getElementsByClassName("close-kapha")[0];
+                    // When the user clicks on <span> (x), close the modal
+                    closeKapha.onclick = function () {
+                        kaphaModal.style.display = "none";
+                    };
                 }
 
             });
