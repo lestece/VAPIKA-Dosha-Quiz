@@ -88,7 +88,7 @@
                 signupForm.reset();
                 //If the form is successfully sent, it
                 sessionStorage.setItem('userName', userName);
-                window.location = "../quiz-results.html";
+                window.location = "../../quiz-results.html";
                 //If there's an error, it will log "Failed..." and console log the error
             }, function (error) {
                 console.log('FAILED...', error)
@@ -99,7 +99,7 @@
     <script>
         //Script for "go to results page" button 
 document.getElementById("results-btn").addEventListener("click", function () {
-  window.location = "../quiz-results.html";
+  window.location = "../../quiz-results.html";
 });
     </script>
 

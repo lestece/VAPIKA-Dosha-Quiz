@@ -285,7 +285,7 @@ function checkEndQuiz(){
         localStorage.setItem('vataPoints', vataPoints);
         localStorage.setItem('pittaPoints', pittaPoints);
         localStorage.setItem('kaphaPoints', kaphaPoints);
-        window.location = "../sign-up.html";
+        window.location = "../../sign-up.html";
     }
 }
 
