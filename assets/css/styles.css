@@ -108,6 +108,10 @@ button {
   cursor: pointer;
 }
 
+button:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
 #start-quiz {
   display: block;
   font-size: 2.2rem;
@@ -150,7 +154,7 @@ footer i {
 }
 
 #question-text {
-  margin-top: 2rem;
+  margin: 2rem 2rem 0;
   font-family: "Tenor Sans", sans-serif;
 }
 
@@ -195,9 +199,9 @@ footer i {
 }
 
 #sign-up-p {
-  color: black;
   font-size: 1.2rem;
   line-height: 1.6rem;
+  margin-bottom: 2rem;
 }
 
 .signup-form input,
@@ -206,12 +210,21 @@ footer i {
   margin: 1rem auto;
   padding: 0.8rem;
   text-align: center;
+  width: 80%;
 }
 
 .sign-up-container .btn {
   background-color: #e7e8ea;
   color: #9f7e74;
   margin-top: 1rem;
+}
+
+.sign-up-container button{
+  font-weight: bold;
+}
+
+.sign-up-container button:hover{
+  color: black;
 }
 
 /* Results page */
@@ -245,6 +258,10 @@ footer i {
     width: 65%;
     
     margin-left: 2rem;
+  }
+
+  .container{
+    width: 70%;
   }
 }
 
@@ -297,9 +314,17 @@ footer i {
     padding: 1rem 2rem;
   }
 
+  .container{
+    width: 70%;
+  }
+
+  #sign-up-heading{
+    font-size: 2.2rem;
+  }
+
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 450px) {
   .main-container h1 {
     font-size: 2.5rem;
   }
@@ -315,4 +340,13 @@ footer i {
   .modal-content h1 {
     font-size: 2rem;
   }
+  .sign-up-container{
+    padding: 1rem 2rem 2rem;
+  }
+  #sign-up-heading{
+    margin-top: 1rem;
+    font-size: 1.7rem;
+  }
+
+  
 }
