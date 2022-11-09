@@ -233,6 +233,21 @@ footer i {
   color: #e7e8ea;
 }
 
+#chart-legend-div{
+  margin-top: 3rem;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+}
+
+.legend-color{
+  width: 30px;
+  height: 30px;
+  border: 1px solid #E7E8EA;
+  margin: 0 auto;
+}
+
 #chart_div {
   width: 100%;
   height: 300px;
