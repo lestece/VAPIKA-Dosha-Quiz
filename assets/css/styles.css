@@ -151,7 +151,9 @@ button {
   }
 
   .selected-answer{
-    background-color: blanchedalmond;
+    background-color: rgba(3,3,3,0.3);
+    color: #E7E8EA;
+    border: 1px solid #E7E8EA;
   }
   
   .controls {
