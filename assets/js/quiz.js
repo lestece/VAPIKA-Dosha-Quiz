@@ -104,7 +104,7 @@ const quizQuestions = [
         question: "Appetite",
         answers: {
             v: "Irregular, small appetite. Often forgets to eat",
-            p: "Robust, healthy appetite. Rarely misses a meal and can become 'h-angry'",
+            p: "Robust, healthy appetite. Rarely misses a meal and can become 'hangry'",
             k: "Steady, moderate appetite. Emotional eating. Tends to eat large amounts even when not hungry",
         }
 
@@ -285,7 +285,7 @@ function checkEndQuiz(){
         localStorage.setItem('vataPoints', vataPoints);
         localStorage.setItem('pittaPoints', pittaPoints);
         localStorage.setItem('kaphaPoints', kaphaPoints);
-        window.location = "../../sign-up.html";
+        window.location = "sign-up.html";
     }
 }
 
