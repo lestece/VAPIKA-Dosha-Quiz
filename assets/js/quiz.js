@@ -1,3 +1,5 @@
+
+
 // All of the quiz questions are found below
 const quizQuestions = [
     {
@@ -239,7 +241,6 @@ function displayQuestions() {
     vataAnswer.innerText = quizQuestions[i].answers.v;
     pittaAnswer.innerText = quizQuestions[i].answers.p;
     kaphaAnswer.innerText = quizQuestions[i].answers.k;
-    console.log(vataPoints, pittaPoints, kaphaPoints);
     i++;
 
 }
@@ -263,7 +264,11 @@ nextButton.addEventListener('click', function () {
         checkEndQuiz();
     } else {
         //Make sure that an answer is selected
-        alert('please select an answer!');
+        // Use sweetAlert 
+        swal({
+            title: "Please choose one option!",
+            text: `For an accurate result, it's very important that you answer to all of the questions. You don't have to match with all of the points in the answer; just select the one that represents you the best.`
+        });
     }
     
 });
