@@ -203,131 +203,147 @@ let kaphaPoints = 0;
 let dosha;
 
 //When the DOM is loaded, display the first question
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
 
     displayQuestions();
 });
 
 
 //Add event listener to the answer options 
-    for (let button of buttons) {
-        button.addEventListener("click", function() {
-            //Add class for selected answer when user clicks on one of the answers
-            if (this.getAttribute("id") === "vata-option") {
-                vataAnswer.classList.add("selected-answer");
-                //If the user changes answer, deselect the previous ones
-                pittaAnswer.classList.remove("selected-answer");
-                kaphaAnswer.classList.remove("selected-answer");
-            } else if (this.getAttribute("id") === "pitta-option") {
-                pittaAnswer.classList.add("selected-answer");
-                vataAnswer.classList.remove("selected-answer");
-                kaphaAnswer.classList.remove("selected-answer");
-            } else if(this.getAttribute("id") === "kapha-option") {
-                kaphaAnswer.classList.add("selected-answer");
-                pittaAnswer.classList.remove("selected-answer");
-                vataAnswer.classList.remove("selected-answer");
-            }
-        })};
+for (let button of buttons) {
+    button.addEventListener("click", function () {
+        //Add class for selected answer when user clicks on one of the answers
+        if (this.getAttribute("id") === "vata-option") {
+            vataAnswer.classList.add("selected-answer");
+            //If the user changes answer, deselect the previous ones
+            pittaAnswer.classList.remove("selected-answer");
+            kaphaAnswer.classList.remove("selected-answer");
+        } else if (this.getAttribute("id") === "pitta-option") {
+            pittaAnswer.classList.add("selected-answer");
+            vataAnswer.classList.remove("selected-answer");
+            kaphaAnswer.classList.remove("selected-answer");
+        } else if (this.getAttribute("id") === "kapha-option") {
+            kaphaAnswer.classList.add("selected-answer");
+            pittaAnswer.classList.remove("selected-answer");
+            vataAnswer.classList.remove("selected-answer");
+        }
+    })
+};
 
 
 // function to display the questions
 function displayQuestions() {
-    currentQuestion +=1;
+    currentQuestion += 1;
     currentQuestionCounter.innerText = currentQuestion;
     questionText.innerText = quizQuestions[i].question;
     vataAnswer.innerText = quizQuestions[i].answers.v;
     pittaAnswer.innerText = quizQuestions[i].answers.p;
     kaphaAnswer.innerText = quizQuestions[i].answers.k;
+    console.log(vataPoints, pittaPoints, kaphaPoints);
     i++;
 
 }
 
 //Add event listener to the next question button
-nextButton.addEventListener('click', function(){
-//Check which answer option has the selected class
-if (vataAnswer.classList.contains('selected-answer')){
-    //Increment the selected dosha points by one
-    vataPoints++;
-} else if (pittaAnswer.classList.contains('selected-answer')){
-    pittaPoints++;
-} else if (kaphaAnswer.classList.contains('selected-answer')){
-    kaphaPoints++;
-} else {
-    alert('please select an answer!');
-}
+nextButton.addEventListener('click', function () {
+    //Check which answer option has the selected class
+    if (vataAnswer.classList.contains('selected-answer')) {
+        //Increment the selected dosha points by one
+        vataPoints++;
+        //deselects answers and goes to the next question
+        deselectAnswers();
+        displayQuestions();
+    } else if (pittaAnswer.classList.contains('selected-answer')) {
+        pittaPoints++;
+        deselectAnswers();
+        displayQuestions();
+    } else if (kaphaAnswer.classList.contains('selected-answer')) {
+        kaphaPoints++;
+        deselectAnswers();
+        displayQuestions();
+    } else {
+        alert('please select an answer!');
+    }
+    
 });
 
+//Function to deselect all answers before going to the next question
+function deselectAnswers(){
+    vataAnswer.classList.remove("selected-answer");
+    pittaAnswer.classList.remove("selected-answer");
+    kaphaAnswer.classList.remove("selected-answer");
+}
 
 
 //Function that checks the selected answer and adds points to the related dosha
-    function checkAnswer(){
-        /**
-         * Iterates through the button elements to check
-         * if an answer has been selected and if so,
-         * it increments the points of the dosha related to that answer
-         * or if the next or previous question buttons have been clicked
-         * and reacting accordingly
-         */
-            
+function checkAnswer() {
+    /**
+     * Iterates through the button elements to check
+     * if an answer has been selected and if so,
+     * it increments the points of the dosha related to that answer
+     * or if the next or previous question buttons have been clicked
+     * and reacting accordingly
+     */
 
-            // // Checks if there's still questions to be answered
-            // if (currentQuestion<quizQuestions.length){
-            //     displayQuestions();
-            // } else {
-            //     calculateDosha(vataPoints, pittaPoints, kaphaPoints);
-            //     //Stores the dosha points in the local storage
-            //     localStorage.setItem('vataPoints', vataPoints);
-            //     localStorage.setItem('pittaPoints', pittaPoints);
-            //     localStorage.setItem('kaphaPoints', kaphaPoints);
-            //     window.location = "../sign-up.html";
-            // }
-            
-            
-           
-    };
 
-    checkAnswer();
+    // // Checks if there's still questions to be answered
+    // if (currentQuestion<quizQuestions.length){
+    //     displayQuestions();
+    // } else {
+    //     calculateDosha(vataPoints, pittaPoints, kaphaPoints);
+    //     //Stores the dosha points in the local storage
+    //     localStorage.setItem('vataPoints', vataPoints);
+    //     localStorage.setItem('pittaPoints', pittaPoints);
+    //     localStorage.setItem('kaphaPoints', kaphaPoints);
+    //     window.location = "../sign-up.html";
+    // }
 
-    // Function to calculate the Dosha
-    function calculateDosha(v,p,k){
-        //If Vata is the dominant dosha
-        if ((v > p) && (v > k)){
-            if (p > k){
-                dosha = "Vata - Pitta";
-            } else if (k > p) {
-                dosha = "Vata - Kapha";
-            } else {
-                dosha = "Vata";
-            }
-            //If Pitta is the dominant dosha
-        } else if((p > v) && (p > k)){
-            if (v > k){
-                dosha = "Pitta - Vata";
-            } else if (k > v){
-                dosha = "Pitta - Kapha";
-            } else {
-                dosha = "Pitta";
-            }
-        //If Kapha is the dominant dosha
-        } else if (( k > v) && (k > p )){
-            if (v > p){
-                dosha = "Kapha - Vata";
-            } else if(p > v){
-                dosha = "Kapha - Vata";
-            } else {
-                dosha = "Kapha";
-            }
-        } //If two doshas score the same points
-        else if (v === p){
+
+
+};
+
+checkAnswer();
+
+// Function to calculate the Dosha
+function calculateDosha(v, p, k) {
+    //If Vata is the dominant dosha
+    if ((v > p) && (v > k)) {
+        if (p > k) {
             dosha = "Vata - Pitta";
-        } else if (p === k){
-            dosha = "Pitta - Kapha";
-        } else if (k === v){
-            dosha = "Kapha - Vata";
-        } //If all of the three doshas score the same points
-        else {
-            dosha = "Tridoshic";
+        } else if (k > p) {
+            dosha = "Vata - Kapha";
+        } else {
+            dosha = "Vata";
         }
-        //Store the dosha in the local storage
-        localStorage.setItem('dosha', dosha);
+        //If Pitta is the dominant dosha
+    } else if ((p > v) && (p > k)) {
+        if (v > k) {
+            dosha = "Pitta - Vata";
+        } else if (k > v) {
+            dosha = "Pitta - Kapha";
+        } else {
+            dosha = "Pitta";
+        }
+        //If Kapha is the dominant dosha
+    } else if ((k > v) && (k > p)) {
+        if (v > p) {
+            dosha = "Kapha - Vata";
+        } else if (p > v) {
+            dosha = "Kapha - Vata";
+        } else {
+            dosha = "Kapha";
+        }
+    } //If two doshas score the same points
+    else if (v === p) {
+        dosha = "Vata - Pitta";
+    } else if (p === k) {
+        dosha = "Pitta - Kapha";
+    } else if (k === v) {
+        dosha = "Kapha - Vata";
+    } //If all of the three doshas score the same points
+    else {
+        dosha = "Tridoshic";
     }
+    //Store the dosha in the local storage
+    localStorage.setItem('dosha', dosha);
+}
