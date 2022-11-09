@@ -221,9 +221,11 @@
             // Set chart options
             var options = {
                 width: '100%',
-                height: 300,
+                height:'100%',
                 chartArea:{left:0,top:0,width:'100%',height:'100%'},
                 backgroundColor: '#9f7e74',
+                legend: {position: 'none'},
+                tooltip: {textStyle: {fontSize: 22}, showColorCode: true},
                 sliceVisibilityTreshold: .0,
                 slices: [{ color: '#8accf2' }, { color: '#f7cf97' }, { color: '#c3fabb' }]
             };
