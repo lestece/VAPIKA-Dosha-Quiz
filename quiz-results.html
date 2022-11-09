@@ -29,6 +29,14 @@
             </h1>
             <p id="results-p">Click on the chart to learn more about your dosha!</p>
             <div id="chart_div"></div>
+            <!-- Modal for Vata Dosha -->
+            <div id="vata-modal" class="modal" style="color: black;">
+                <div class="modal-content">
+                    <span class="close close-vata">&times;</span>
+                    <h1 style="color: black;">Vata</h1>
+                    <p>Vata content</p>
+                </div>
+            </div>
         </div>
     </main>
 
@@ -93,10 +101,21 @@
 
             google.visualization.events.addListener(chart, 'select', function (e) {
                 var selection = chart.getSelection();
-                
-                if (selection[0].row === 0){
-                    alert('You selected Vata!')
-                } else if (selection[0].row === 1){
+
+                if (selection[0].row === 0) {
+                    // alert('You selected Vata!')
+                    // Get the modal
+                    let vataModal = document.getElementById("vata-modal");
+                    //Open the modal
+                    vataModal.style.display = "block";
+                    // Get the <span> element that closes the modal
+                    let closeVata = document.getElementsByClassName("close-vata")[0];
+                    // When the user clicks on <span> (x), close the modal
+                    closeVata.onclick = function () {
+                        vataModal.style.display = "none";
+                    
+                    };
+                } else if (selection[0].row === 1) {
                     alert('You selected Pitta!')
                 } else {
                     alert('You selected Kapha!')
