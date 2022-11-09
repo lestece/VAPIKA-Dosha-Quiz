@@ -181,14 +181,6 @@ const quizQuestions = [
     },
 ]
 
-/**
- * The number of questions is dinamically saved into the
- * local storage so that it can be retrieved in the results script
- * for calculatuing the percentages
- */
-let numOfQuestions = quizQuestions.length;
-localStorage.setItem('numOfQuestions', numOfQuestions);
-console.log(numOfQuestions);
 
 //Variables for accessing and manipulating the DOM
 let currentQuestionCounter = document.getElementById('current-question');
@@ -196,7 +188,6 @@ let questionText = document.getElementById('question-text');
 let vataAnswer = document.getElementById('vata-option');
 let pittaAnswer = document.getElementById('pitta-option');
 let kaphaAnswer = document.getElementById('kapha-option');
-let prevButton = document.getElementById('btn-prev');
 let nextButton = document.getElementById('btn-next');
 
 // QUIZ FUNCTIONALITY
@@ -209,6 +200,11 @@ let pittaPoints = 0;
 let kaphaPoints = 0;
 let dosha;
 
+//When the DOM is loaded, display the first Question
+document.addEventListener("DOMContentLoaded", function() {
+
+    displayQuestions();
+});
 
 
 // function to display the questions
@@ -222,7 +218,11 @@ function displayQuestions() {
     i++;
 
 }
-displayQuestions();
+
+//Add event listener to the next button
+nextButton.addEventListener('click', function(){
+
+})
 
 
 
@@ -241,25 +241,34 @@ displayQuestions();
         button.addEventListener("click", function() {
             // Dosha points increment
             if (this.getAttribute("id") === "vata-option") {
+                vataAnswer.classList.add("selected-answer");
+                pittaAnswer.classList.remove("selected-answer");
+                kaphaAnswer.classList.remove("selected-answer");
                 vataPoints++;
             } else if (this.getAttribute("id") === "pitta-option") {
+                pittaAnswer.classList.add("selected-answer");
+                vataAnswer.classList.remove("selected-answer");
+                kaphaAnswer.classList.remove("selected-answer");
                 pittaPoints++;
             } else if(this.getAttribute("id") === "kapha-option") {
+                kaphaAnswer.classList.add("selected-answer");
+                pittaAnswer.classList.remove("selected-answer");
+                vataAnswer.classList.remove("selected-answer");
                 kaphaPoints++;
             } // Add functionalities for previous and next buttons
             
 
-            // Checks if there's still questions to be answered
-            if (currentQuestion<quizQuestions.length){
-                displayQuestions();
-            } else {
-                calculateDosha(vataPoints, pittaPoints, kaphaPoints);
-                //Stores the dosha points in the local storage
-                localStorage.setItem('vataPoints', vataPoints);
-                localStorage.setItem('pittaPoints', pittaPoints);
-                localStorage.setItem('kaphaPoints', kaphaPoints);
-                window.location = "../sign-up.html";
-            }
+            // // Checks if there's still questions to be answered
+            // if (currentQuestion<quizQuestions.length){
+            //     displayQuestions();
+            // } else {
+            //     calculateDosha(vataPoints, pittaPoints, kaphaPoints);
+            //     //Stores the dosha points in the local storage
+            //     localStorage.setItem('vataPoints', vataPoints);
+            //     localStorage.setItem('pittaPoints', pittaPoints);
+            //     localStorage.setItem('kaphaPoints', kaphaPoints);
+            //     window.location = "../sign-up.html";
+            // }
             
             
            

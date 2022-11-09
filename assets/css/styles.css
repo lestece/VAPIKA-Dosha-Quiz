@@ -127,15 +127,19 @@ button {
     font-family: "Sen", sans-serif;
     text-transform: lowercase;
   }
+
+  .selected-answer{
+    background-color: blanchedalmond;
+  }
   
   .controls {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 2rem;
+    margin: 0 auto;
   }
   
   .controls button {
-    color: #e7e8ea;
+    margin-top: 2rem;
+    color: black;
+    background-color:#e7e8ea ;
   }
   
   /* Sign up page styles*/
