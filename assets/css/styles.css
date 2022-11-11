@@ -112,6 +112,8 @@ p {
   list-style-type: circle;
   font-size: 1.2rem;
 }
+
+
 .bold-text{
   font-weight: bold;
   font-family: "Tenor Sans", sans-serif;
@@ -128,7 +130,6 @@ p {
   line-height: 3rem !important;
 }
 
-
 /* Modal close btn */
 .close-modal-btn-box {
   position: fixed;
@@ -142,7 +143,7 @@ p {
   cursor: pointer;
 }
 
-#learn-more-modal h1{
+.homepage-modal h1{
   font-size: 4rem;
 }
 
@@ -411,7 +412,7 @@ footer i {
     width: 95%;
   }
 
-  #learn-more-modal h1{
+  .homepage-modal h1{
     font-size: 3rem;
   }
 
@@ -442,11 +443,11 @@ footer i {
     font-size: 4rem;
   }
 
-  #learn-more-modal h1{
+  .homepage-modal h1{
     font-size: 2.6rem;
   }
 
-  #learn-more-modal p{
+  .homepage-modal p{
     font-size: 1.5rem;
   }
 
