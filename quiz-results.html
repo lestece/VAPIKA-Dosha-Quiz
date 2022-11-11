@@ -41,15 +41,15 @@
                     <div class="legend-color" id="kapha-color"></div>
                     <p>Kapha</p>
                 </div>
-            </div>  
+            </div>
 
             <div id="chart_div"></div>
             <!-- Modal for Vata Dosha -->
             <div id="vata-modal" class="modal" style="color: black;">
                 <div class="modal-content">
-                    <span class="close close-vata">&times;</span>
-                    <img src="assets/images/vata.png" alt="Vata Dosha elements">
-                    <h1 style="color: black;">Vata</h1>
+                    <span class="close close-vata close-modal-btn-box">&times;</span>
+                    <img src="assets/images/vata.png" alt="Vata Dosha elements" class="dosha-img">
+                    <h1>Vata</h1>
                     <p>The Vata dosha is responsible for communication, movement and elimination of all wastes from the
                         body.
                         <br>
@@ -93,21 +93,23 @@
             <!-- Modal for Pitta Dosha -->
             <div id="pitta-modal" class="modal" style="color: black;">
                 <div class="modal-content">
-                    <span class="close close-pitta">&times;</span>
-                    <img src="assets/images/pitta.png" alt="Pitta Dosha elements">
-                    <h1 style="color: black;">Pitta</h1>
+                    <span class="close close-pitta close-modal-btn-box">&times;</span>
+                    <img src="assets/images/pitta.png" alt="Pitta Dosha elements" class="dosha-img">
+                    <h1>Pitta</h1>
                     <p>Pitta individuals are dominated by the element of fire, which is what creates heat in the body
                         and is responsible for metabolising, processing and digesting all of our thoughts and food
                         ingested.
+                    </p>
+                    <p>With strong and athletic bodies, Pittas individuals are driven, competitive, and like to be in
+                        control and at the centre of attention. 
                         <br>
-                        With strong and athletic bodies, Pittas individuals are driven, competitive, and like to be in
-                        control and at the centre of attention. Their go-to emotion is anger and they will always ensure
-                        you understand their point of view by using their sharp tongues. Their life lesson is to learn
+                        Their go-to emotion is anger and they will always ensure
+                        you understand their point of view by using their sharp tongues.
+                        <br> Their life lesson is to learn
                         how to control their ego and fiery mind/nature.
                         <br>
                         Pitta personalities have a strong intellect and a strong digestion, they are perfectionists and
-                        are great at creating, planning, organising and executing (as long as they are in charge).
-                    </p>
+                        are great at creating, planning, organising and executing (as long as they are in charge).</p>
                     <h2>Elements</h2>
                     <p>Being the dosha dominated by Fire and Water, adding more Fire to it would only bring troubles!
                         This is why the elements that calm Pitta are Air, Water and Earth. Tastes that will help calming
@@ -140,9 +142,9 @@
             <!-- Modal for Kapha Dosha -->
             <div id="kapha-modal" class="modal" style="color: black;">
                 <div class="modal-content">
-                    <span class="close close-kapha">&times;</span>
-                    <img src="assets/images/Kapha.png" alt="Kapha Dosha elements">
-                    <h1 style="color: black;">Kapha</h1>
+                    <span class="close close-kapha close-modal-btn-box">&times;</span>
+                    <img src="assets/images/Kapha.png" alt="Kapha Dosha elements" class="dosha-img">
+                    <h1>Kapha</h1>
                     <p>Kaphas are caring, maternal, graceful, sensual types. It is said that without Kaphas there would
                         be no home, no children and no family, as Kapha energy ensures the stability and foundation of
                         the home.
@@ -180,7 +182,8 @@
                         running, cycling, aerobic activity and competitive sports,
                         learning a new skill,stimulating the mind,
                         changing or varying your daily routine,
-                        travelling, seeking out new friendships and meeting new people (whatever gets you out of your comfort zone),
+                        travelling, seeking out new friendships and meeting new people (whatever gets you out of your
+                        comfort zone),
                         have your main meal at lunchtime.</p>
                 </div>
             </div>
@@ -236,13 +239,13 @@
             // Set chart options
             var options = {
                 width: '100%',
-                height:'100%',
-                chartArea:{left:0,top:0,width:'100%',height:'100%'},
+                height: '100%',
+                chartArea: { left: 0, top: 0, width: '100%', height: '100%' },
                 backgroundColor: '#9f7e74',
-                legend: {position: 'none'},
-                tooltip: {textStyle: {fontSize: 22}, showColorCode: true},
+                legend: { position: 'none' },
+                tooltip: { textStyle: { fontSize: 22 }, showColorCode: true },
                 sliceVisibilityTreshold: .0,
-                slices: [{ color: '#8accf2', textStyle:{color:'black'}}, { color: '#f7cf97', textStyle:{color:'black'}}, { color: '#c3fabb' , textStyle:{color:'black'}}],
+                slices: [{ color: '#8accf2', textStyle: { color: 'black' } }, { color: '#f7cf97', textStyle: { color: 'black' } }, { color: '#c3fabb', textStyle: { color: 'black' } }],
             };
 
             // Instantiate and draw our chart, passing in some options.

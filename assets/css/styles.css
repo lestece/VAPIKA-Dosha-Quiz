@@ -28,7 +28,7 @@ header {
   width: 8rem;
 }
 
-main{
+main {
   padding-bottom: 4rem;
 }
 
@@ -53,6 +53,9 @@ p {
   margin: 2rem 1rem;
 }
 
+.modal p{
+  margin-bottom: 3rem;
+}
 /* Styles for learn more and instructions buttons modal windows */
 .modal {
   display: none;
@@ -82,16 +85,19 @@ p {
   /* 15% from the top and centered */
   padding: 2rem 5rem;
   border: 1px solid #888;
-  width: 80%;
-  /* Could be more or less, depending on screen size */
+  width: 85%;
 }
 
 .modal-content h1 {
   margin: 7rem 0 3rem;
+  font-size: 6rem;
 }
 
 /* Modal close btn */
 .close-modal-btn-box {
+  position: fixed;
+  right: 9%;
+  top: 5%;
   background-color: #9f7e74;
   color: #E7E8EA;
   float: right;
@@ -110,7 +116,7 @@ button {
 }
 
 button:hover {
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
 #start-quiz {
@@ -177,7 +183,7 @@ footer i {
   font-family: "Tenor Sans", sans-serif;
 }
 
-.swal-title{
+.swal-title {
   font-family: "Tenor Sans", sans-serif;
 }
 
@@ -233,26 +239,25 @@ footer i {
   margin-top: 1rem;
 }
 
-.sign-up-container button{
+.sign-up-container button {
   font-weight: bold;
 }
 
-.sign-up-container button:hover{
+.sign-up-container button:hover {
   color: black;
 }
 
 /* Results page */
 
-#results-container{
+#results-container {
   padding: 2rem;
 }
 
 #results-container h1 {
   margin: 3rem 0;
-  color: #e7e8ea;
 }
 
-#chart-legend-div{
+#chart-legend-div {
   margin-top: 3rem;
   padding: 0 2rem;
   display: flex;
@@ -260,20 +265,22 @@ footer i {
   font-size: 1rem;
 }
 
-.legend-color{
+.legend-color {
   width: 30px;
   height: 30px;
   border: 1px solid #E7E8EA;
   margin: 0 auto;
 }
 
-#vata-color{
+#vata-color {
   background-color: #8accf2;
 }
-#pitta-color{
+
+#pitta-color {
   background-color: #f7cf97;
 }
-#kapha-color{
+
+#kapha-color {
   background-color: #c3fabb;
 }
 
@@ -283,24 +290,30 @@ footer i {
   margin: 3rem auto;
 }
 
+/* Results page modal windows styling */
+.dosha-img{
+  width: 80%;
+}
+
 
 /* Media queries */
 /* Media queries for large and medium devices (landscape tablets, laptops/desktops 1021 px and down) */
 @media only screen and (max-width: 1021px) {
-  main{
+  main {
     margin-top: 0;
   }
-  #start-quiz{
+
+  #start-quiz {
     margin: 0 auto 1.3rem
   }
 
   .main-container {
     width: 65%;
-    
+
     margin-left: 2rem;
   }
 
-  .container{
+  .container {
     width: 70%;
   }
 }
@@ -350,15 +363,19 @@ footer i {
     margin-top: 3rem;
   }
 
+  .close-modal-btn-box{
+    right: 2%;
+  }
   .modal-content {
     padding: 1rem 2rem;
+    width: 95%;
   }
 
-  .container{
+  .container {
     width: 70%;
   }
 
-  #sign-up-heading{
+  #sign-up-heading {
     font-size: 2.2rem;
   }
 
@@ -380,13 +397,18 @@ footer i {
   .modal-content h1 {
     font-size: 2rem;
   }
-  .sign-up-container{
+
+  .sign-up-container {
     padding: 1rem 2rem 2rem;
   }
-  #sign-up-heading{
+
+  #sign-up-heading {
     margin-top: 1rem;
     font-size: 1.7rem;
   }
 
-  
+  #chart-legend-div {
+    flex-direction: column;
+  }
+
 }
