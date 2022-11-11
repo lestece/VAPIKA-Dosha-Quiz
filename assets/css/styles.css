@@ -89,9 +89,45 @@ p {
 }
 
 .modal-content h1 {
+  color: #9f7e74 !important;
   margin: 7rem 0 3rem;
   font-size: 6rem;
 }
+
+.modal-content h2{
+  color: #9f7e74;
+  margin-top: 1rem;
+}
+
+.modal-content p{
+  line-height: normal;
+  text-align: justify;
+  font-size: 1.5rem;
+}
+
+.modal-content li{
+  margin: 2rem 0;
+  text-align: left;
+  font-style: italic;
+  list-style-type: circle;
+  font-size: 1.2rem;
+}
+.bold-text{
+  font-weight: bold;
+  font-family: "Tenor Sans", sans-serif;
+}
+
+.italic-text{
+  font-style: italic;
+}
+
+.dosha-intro{
+  font-size: 1.8rem !important;
+  font-family: "Tenor Sans", sans-serif;
+  text-align: center !important;
+  line-height: 3rem !important;
+}
+
 
 /* Modal close btn */
 .close-modal-btn-box {
@@ -255,6 +291,7 @@ footer i {
 
 #results-container h1 {
   margin: 3rem 0;
+  color: #E7E8EA;
 }
 
 #chart-legend-div {
@@ -364,7 +401,9 @@ footer i {
   }
 
   .close-modal-btn-box{
-    right: 2%;
+    right: 5%;
+    font-size: 2rem;
+    width: 40px;
   }
   .modal-content {
     padding: 1rem 2rem;
@@ -395,9 +434,12 @@ footer i {
   }
 
   .modal-content h1 {
-    font-size: 2rem;
+    font-size: 4rem;
   }
 
+  .modal-content p{
+    text-align: center;
+  }
   .sign-up-container {
     padding: 1rem 2rem 2rem;
   }
