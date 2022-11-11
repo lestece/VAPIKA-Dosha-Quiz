@@ -121,7 +121,7 @@ p {
   font-style: italic;
 }
 
-.dosha-intro{
+.intro{
   font-size: 1.8rem !important;
   font-family: "Tenor Sans", sans-serif;
   text-align: center !important;
@@ -137,11 +137,14 @@ p {
   background-color: #9f7e74;
   color: #E7E8EA;
   float: right;
-  font-size: 3rem;
-  width: 60px;
+  font-size: 2rem;
+    width: 40px;
   cursor: pointer;
 }
 
+#learn-more-modal h1{
+  font-size: 4rem;
+}
 
 button {
   background-color: #9f7e74;
@@ -402,12 +405,14 @@ footer i {
 
   .close-modal-btn-box{
     right: 5%;
-    font-size: 2rem;
-    width: 40px;
   }
   .modal-content {
     padding: 1rem 2rem;
     width: 95%;
+  }
+
+  #learn-more-modal h1{
+    font-size: 3rem;
   }
 
   .container {
@@ -435,6 +440,14 @@ footer i {
 
   .modal-content h1 {
     font-size: 4rem;
+  }
+
+  #learn-more-modal h1{
+    font-size: 2.6rem;
+  }
+
+  #learn-more-modal p{
+    font-size: 1.5rem;
   }
 
   .modal-content p{
