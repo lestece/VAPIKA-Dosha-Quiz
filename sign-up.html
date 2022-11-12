@@ -26,6 +26,7 @@
 
     <main>
         <div class="container sign-up-container">
+            <!-- Form that takes in user name and email and sends a newsletter confirmation email if correctly submitted -->
             <form method="" action="" class="signup-form" id="signup-form">
                 <h1 id="sign-up-heading">Thank you for completing the quiz!</h1>
                 <p id="sign-up-p">
@@ -39,8 +40,10 @@
                     placeholder="Your email address" />
                 <textarea id="feedback" name="feedback" rows="4" cols="50"
                     placeholder="leave us a feedback..."></textarea>
+                <!-- onclick event implementation based on the emailjs tutorial followed on https://martinezjf2.medium.com/how-to-setup-emailjs-33809350f0f8 -->
                 <button class="btn" id="signup-btn" onclick='sendMail()'>Sign up</button>
             </form>
+            <!-- User can skip the sign-up form and go straight to results -->
             <button class="btn" id="results-btn">
                 Skip and go to your quiz result
             </button>
@@ -70,68 +73,9 @@
     <script src="sweetalert2.all.min.js"></script>
     <!-- EmailJS script -->
     <!-- Inspired by the tutorial at https://martinezjf2.medium.com/how-to-setup-emailjs-33809350f0f8 -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
-    </script>
-    <!-- Connect to my EmailJS account using my Public Key -->
-    <script>
-        (function () {
-            emailjs.init("-nc1aZVdy7YoJikvg");
-        })();</script>
-    <!--Function to call the emailjs.sendForm method -->
-    <script>
-        function sendMail() {
-            document.getElementById('signup-form').addEventListener('submit', function (event) {
-                let userName = document.getElementById('user-name').value;
-                event.preventDefault();
-                //Method provided within the emailJS documentation at https://www.emailjs.com/docs/sdk/send-form/
-                emailjs.sendForm('service_6z74g5e', "template_h7twzk8", '#signup-form').then(function () {
-                    console.log('SUCCESS');
-                    //Get the button element
-                    let subscribe = document.getElementById('signup-btn');
-                    //Get the sign up form
-                    let signupForm = document.getElementById('signup-form');
-                    //reset will clear the form
-                    signupForm.reset();
-                    //If the form is successfully sent, it
-                    sessionStorage.setItem('userName', userName);
-                    // Sweet Alert sign up confirmation with timer pop up window          
-                    let timerInterval
-                    Swal.fire({
-                        title: 'You have successfully signed up!',
-                        html: `Check your Inbox for a confirmation email.
-                        You're now being redirected to the results page!`,
-                        timer: 4000,
-                        timerProgressBar: true,
-                        didOpen: () => {
-                            Swal.showLoading()
-                            const b = Swal.getHtmlContainer().querySelector('b')
-                            timerInterval = setInterval(() => {
-                                b.textContent = Swal.getTimerLeft()
-                            }, 100)
-                        },
-                        willClose: () => {
-                            clearInterval(timerInterval)
-                        }
-                    }).then((result) => {
-                        /* Redirects to results page */
-                        if (result.dismiss === Swal.DismissReason.timer) {
-                            window.location = "./quiz-results.html";
-                        }
-                    })
-                    //If there's an error, it will log "Failed..." and console log the error
-                }, function (error) {
-                    console.log('FAILED...', error)
-                });
-            });
-        }
-    </script>
-    <script>
-        //Script for "go to results page" button 
-        document.getElementById("results-btn").addEventListener("click", function () {
-            window.location = "./quiz-results.html";
-        });
-    </script>
-
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <!-- js script -->
+    <script src="assets/js/sign-up.js"></script>
 
 </body>
 

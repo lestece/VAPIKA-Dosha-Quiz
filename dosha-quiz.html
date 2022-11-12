@@ -26,16 +26,20 @@
 
     <main>
         <div class="container">
+            <!-- Question counter block that updates at each question -->
             <div id="question-counter">
                 Question: <span id="current-question">0</span> of 18
             </div>
+            <!-- Quiz question block -->
             <div id="question-text"></div>
             <div class="options">
+                <!-- Quiz answer option buttons -->
                 <button class="btn btn-option" id="vata-option"></button>
                 <button class="btn btn-option" id="pitta-option"></button>
                 <button class="btn btn-option" id="kapha-option"></button>
             </div>
             <div class="controls">
+                <!-- Button to go to the next question -->
                 <button class="btn" id="btn-next">Next question</button>
             </div>
         </div>
@@ -59,8 +63,7 @@
     <script src="https://kit.fontawesome.com/1705e36da1.js" crossorigin="anonymous"></script>
     <!-- js script -->
     <script src="assets/js/quiz.js"></script>
-    <!-- Script for using sweetAlert -->
-    
+    <!-- Script for using sweetAlert for the pop up window that shows up if the user tries to skip a question -->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 
