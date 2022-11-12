@@ -5,9 +5,9 @@ const quizQuestions = [
     {
         question: "How would you describe your body frame?",
         answers: {
-            v: "Slim. It is difficult for me to gain weight",
-            p: "Medium build, symmetrical and with good muscle development",
-            k: "Large, heavy. Weight is gained easily and it's difficult to lose it.",
+            v: "Slim; it is difficult for me to gain weight",
+            p: "Medium built, symmetrical and with good muscle development",
+            k: "Large, heavy; weight is gained easily and difficult to lose",
         }
 
     },
@@ -15,9 +15,9 @@ const quizQuestions = [
     {
         question: "Skin:",
         answers: {
-            v: "Dry, thin skin (veins easily visible). Cool, dark circles under eyes. Tans easily. Scanty perspiration.",
-            p: "Reddish and sensitive skin. Susceptible to wrinkles, moles, freckles, rashes, flushes, sunburn, occasional spots. Sweats easily",
-            k: "Well moisturised, smooth skin with few wrinkles. Prone to blackheads. Tends to tan. Profuse perspiration.",
+            v: "Dry, thin skin (veins easily visible); Cool, dark circles under eyes; Tans easily; Scanty perspiration.",
+            p: "Reddish and sensitive skin; Susceptible to wrinkles, moles, freckles, rashes, flushes, sunburn, occasional spots; Sweats easily",
+            k: "Well moist, smooth skin with few wrinkles; Prone to blackheads; Tends to tan; Profuse perspiration.",
         }
 
     },
@@ -66,7 +66,7 @@ const quizQuestions = [
         question: "Teeth:",
         answers: {
             v: "Irregular teeth, thin gums",
-            p: "Medium teeth, gums bleed easily. Cavities tendency",
+            p: "Medium teeth, gums bleed easily; Cavities tendency",
             k: "Large, strong, straight white teeth, healthy pink gums",
         }
 
@@ -77,7 +77,7 @@ const quizQuestions = [
         answers: {
             v: "Gas, irregular digestion, sensitive stomach",
             p: "Steady, strong digestion",
-            k: "Slow, heavy digestion, feel sleepy after eating",
+            k: "Slow, heavy digestion; feel sleepy after eating",
         }
 
     },
@@ -86,7 +86,7 @@ const quizQuestions = [
         question: "Body temperature:",
         answers: {
             v: "Hands and feet are usually cold; warm environment preference",
-            p: "Warm extremities with good circulation. Prefer cooler environments.",
+            p: "Warm extremities with good circulation; Prefer cooler environments.",
             k: "Body is cold and adaptable to most temperatures",
         }
 
@@ -105,9 +105,9 @@ const quizQuestions = [
     {
         question: "Appetite",
         answers: {
-            v: "Irregular, small appetite. Often forgets to eat",
-            p: "Robust, healthy appetite. Rarely misses a meal and can become 'hangry'",
-            k: "Steady, moderate appetite. Emotional eating. Tends to eat large amounts even when not hungry",
+            v: "Irregular, small appetite; Often forgets to eat",
+            p: "Robust, healthy appetite; Rarely misses a meal and can become 'hangry'",
+            k: "Steady, moderate appetite; Emotional eating; Tends to eat large amounts even when not hungry",
         }
 
     },
@@ -125,9 +125,9 @@ const quizQuestions = [
     {
         question: "Sleep pattern:",
         answers: {
-            v: "Doesn't fall asleep easily and makes up often in the night. Light sleep",
-            p: "Moderately spun sleeper and wakes up energetic in the morning",
-            k: "Moderately spun sleeper and wakes up energetic in the morning",
+            v: "Doesn't fall asleep easily and makes up often in the night; Light sleep",
+            p: "Moderately sound sleeper and wakes up energetic in the morning",
+            k: "Deep, long sleep; Struggles to wake up.",
         }
 
     },
@@ -135,7 +135,7 @@ const quizQuestions = [
     {
         question: "Personality:",
         answers: {
-            v: "Extroverted, easily excited, creative, imaginative, enthusiastic. Indecisive, changeable, lacking constancy, worried, timid.",
+            v: "Extroverted, easily excited, creative, imaginative, enthusiastic, Indecisive, changeable, lacking constancy, worried, timid.",
             p: "Intelligent, powerful, clear, focused, short tempered, aggressive, competitive, workaholic, ambitious, conversationalist, precise, courageous, passionate, protective, dynamic energy, emotional",
             k: "Caring, calm, patient, loyal, easy going, fun, loving, slower moving",
         }
@@ -147,7 +147,7 @@ const quizQuestions = [
         answers: {
             v: "Active mind; good short-term memory but easily forgets",
             p: "Good medium -term memory but accurate",
-            k: "Good long-term memory. Takes longer to learn but never forgets",
+            k: "Good long-term memory; Takes longer to learn but never forgets",
         }
 
     },
@@ -324,15 +324,15 @@ function calculateDosha(v, p, k) {
             dosha = "Kapha";
         }
     } //If two doshas score the same points
-    else if (v === p) {
-        dosha = "Vata - Pitta";
+    else if ((v === p) && (v===k)) {
+        dosha = "Tridoshic (read Vata)";
     } else if (p === k) {
         dosha = "Pitta - Kapha";
     } else if (k === v) {
         dosha = "Kapha - Vata";
     } //If all of the three doshas score the same points
     else {
-        dosha = "Tridoshic";
+        dosha = "Vata-Pitta";
     }
     //Store the dosha in the local storage
     localStorage.setItem('dosha', dosha);
