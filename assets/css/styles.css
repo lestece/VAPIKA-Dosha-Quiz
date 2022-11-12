@@ -303,7 +303,17 @@ footer i {
 
 #results-container h1 {
   margin: 3rem 0;
+  color: rgba(231, 232, 234, 0.7);
+  font-family: "Sen", sans-serif;
+  font-size: 3rem;
+  font-weight: 300;
+}
+
+#results-container h1 span{
+  font-size: 3.2rem;
+  font-family: "Tenor Sans", sans-serif;
   color: #E7E8EA;
+  font-weight: bold;
 }
 
 #chart-legend-div {
@@ -475,6 +485,15 @@ footer i {
 
   #chart-legend-div {
     flex-direction: column;
+  }
+
+  #results-container h1{
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+
+  #results-container h1 span{
+    font-size: 2.5rem;
   }
 
 }
