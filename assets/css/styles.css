@@ -136,7 +136,7 @@ p {
   right: 9%;
   top: 5%;
   background-color: #9f7e74;
-  color: #E7E8EA;
+  color: #E7E8EA !important;
   float: right;
   font-size: 2rem;
     width: 40px;
@@ -354,6 +354,15 @@ footer i {
   width: 80%;
 }
 
+.dosha-modal *{
+  color: black;
+}
+
+.dosha-modal h1{
+  font-family: "Tenor Sans", sans-serif !important;
+  font-weight: bold !important;
+}
+
 
 /* Media queries */
 /* Media queries for large and medium devices (landscape tablets, laptops/desktops 1021 px and down) */
@@ -457,8 +466,9 @@ footer i {
     font-size: 1.4rem;
   }
 
-  .modal-content h1 {
-    font-size: 4rem;
+ 
+  .dosha-modal h1 {
+    font-size: 4rem !important;
   }
 
   .homepage-modal h1{
