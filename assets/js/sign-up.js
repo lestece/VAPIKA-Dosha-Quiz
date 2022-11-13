@@ -21,12 +21,14 @@ function sendMail() {
             //If the form is successfully sent:
             // 1. Store the user name 
             sessionStorage.setItem('userName', userName);
-            // 2. Show a sweetalert sign up confirmation with timer pop up window          
+            // 2. Show a sweetalert sign up confirmation with timer pop up window
+            //Instructions taken from https://sweetalert2.github.io/          
             let timerInterval
             Swal.fire({
                 title: 'You have successfully signed up!',
                 html: `Check your Inbox for a confirmation email.
                         You're now being redirected to the results page!`,
+                // 4secs timer
                 timer: 4000,
                 timerProgressBar: true,
                 didOpen: () => {

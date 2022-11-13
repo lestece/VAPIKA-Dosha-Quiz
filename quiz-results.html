@@ -27,10 +27,14 @@
     <main>
         <div class="container" id="results-container">
             <h1 id="results-heading">
+                <!-- Container to display the user name taken from the sign-up form -->
                 <span id="user-name"></span>
-                your Dosha is <span id="dosha-result"></span>!
+                your Dosha is 
+                <!-- Container for dosha result calculated in the quiz.js file -->
+                <span id="dosha-result"></span>!
             </h1>
             <p id="results-p">Click on the chart to learn more about your dosha!</p>
+            <!-- Color legend for the pie chart -->
             <div id="chart-legend-div">
                 <div class="dosha-legend">
                     <div class="legend-color" id="vata-color"></div>
@@ -45,7 +49,8 @@
                     <p>Kapha</p>
                 </div>
             </div>
-
+            <!-- Pie chart container -->
+            <!-- Implemented by following the instructions at https://developers-dot-devsite-v2-prod.appspot.com/chart/interactive/docs/gallery/piechart -->
             <div id="chart_div"></div>
             <!-- Modal for Vata Dosha -->
             <div id="vata-modal" class="modal dosha-modal">
@@ -53,10 +58,12 @@
                     <span class="close close-vata close-modal-btn-box">&times;</span>
                     <img src="assets/images/vata.png" alt="Vata Dosha elements" class="dosha-img">
                     <h1>Vata</h1>
+                    <!-- Vata dosha introduction -->
                     <p class="intro">The Vata dosha is responsible for <span
                             class="bold-text italic-text">communication, movement and elimination of all wastes</span>
                         from the
                         body. </p>
+                        <!-- Vata dosha general characteristics -->
                     <p>
                         Vata types find it <span class="italic-text">hard to sit still</span> and have <span
                             class="italic-text">wild imaginations</span>. They may be more fearful ad
@@ -74,6 +81,7 @@
                         and one of the biggest
                         challenges for Vatas is to <span class="bold-text">come to a place of self-acceptance</span>.
                     </p>
+                    <!-- Vata dosha Elements  -->
                     <h2>Elements</h2>
                     <p> <span class="bold-text">Earth, Fire and Wate</span>r are the elements that calm this dosha. It's
                         also recommended to <span class="italic-text">avoid
@@ -88,6 +96,7 @@
                         indicators
                         are <span class="italic-text">dry cracked skin and lips, arthritis and joint pain.</span></p>
                     <br>
+                    <!-- Vata dosha triggers unordered list -->
                     <span class="bold-text">Triggers for a Vata imbalance are: </span>
                     <ul>
                         <li>Eating too much cold, icy foods and drinks (especially whatever produces gas in the body)
@@ -100,6 +109,7 @@
                         <li>Spending too much time in front of the computer and TV</li>
                         <li>Stress</li>
                     </ul>
+                    <!-- Vata dosha balancing unordered list -->
                     <h2>Balancing Vata</h2>
                     <ul>
                         <li><span class="bold-text">Gentle calming exercise</span> such as yoga, quigung, dance, golf, walking, swimming
@@ -117,10 +127,12 @@
                     <span class="close close-pitta close-modal-btn-box">&times;</span>
                     <img src="assets/images/pitta.png" alt="Pitta Dosha elements" class="dosha-img">
                     <h1>Pitta</h1>
+                    <!-- Pitta dosha introduction -->
                     <p class="intro">Pitta individuals are dominated by the <span class=bold-text>element of fire</span>, which is what creates heat in the body
                         and is responsible for <span class="bold-text italic-text">metabolising, processing and digesting all of our thoughts and food
                         ingested</span>.
                     </p>
+                    <!-- Pitta dosha general characteristics -->
                     <p>With <span class="bold-text">strong and athletic bodies</span>, Pittas individuals are <span class="italic-text">driven, competitive, and like to be in
                         control and at the centre of attention</span>.
                         Their <span class="italic-text">go-to emotion is anger</span> and they will always ensure
@@ -129,6 +141,7 @@
                         Pitta personalities have a <span class="italic-text">strong intellect and a strong digestion, they are perfectionists and
                         are great at creating, planning, organising and executing</span> (as long as they are in charge).
                     </p>
+                    <!-- Pitta dosha elements -->
                     <h2>Elements</h2>
                     <p>Being the dosha dominated by <span class="bold-text">Fire and Water</span>, adding more Fire to it would only bring troubles!
                         This is why the <span class="bold-text">elements that calm Pitta are Air, Water and Earth</span>. Tastes that will help calming
@@ -141,6 +154,7 @@
                         waking in the middle of the night and being unable to go back to sleep, excess sweating, acne,
                         blood shot eyes and heavy periods.</span>
                         <br> <br>
+                        <!-- Pitta dosha triggers unordered list -->
                         <span class="bold-text">What might be triggering a Pitta imbalance is:</span>
                     <ul>
                         <li>Excess meat in the diet</li>
@@ -151,6 +165,7 @@
                         <li>Skipping meals or fasting</li>
                     </ul>
                     </p>
+                    <!-- Pitta dosha balancing unordered list -->
                     <h2>Balancing Pitta</h2>
                     <ul>
                         <li>Gentle calming exercise</li>
@@ -174,10 +189,12 @@
                     <span class="close close-kapha close-modal-btn-box">&times;</span>
                     <img src="assets/images/Kapha.png" alt="Kapha Dosha elements" class="dosha-img">
                     <h1>Kapha</h1>
+                    <!-- Kapha dosha introduction -->
                     <p class="intro">Kaphas are <span class="bold-text">caring, maternal, graceful, sensual types</span>. It is said that without Kaphas there would
                         be no home, no children and no family, as <span class="bold-text italic-text">Kapha energy ensures the stability and foundation of
                         the home</span>.
                     </p>
+                    <!-- Kapha dosha general characteristics -->
                     <p>
                         They have a <span class="bold-text">slow metabolism and weight issues are a constant issue</span>. Kaphas are slow learners but
                         they never seem to forget; <span class="bold-text">they're the most happy in their own company or being with family</span>.
@@ -185,17 +202,19 @@
                         decisions about anything</span>. It has a stubborn <span class="italic-text">aversion to change</span> and will often get stuck in
                         unhappy relatonships or work situations for long periods of time.
                     </p>
+                    <!-- Kapha dosha elements -->
                     <h2>Elements</h2>
                     <p>Elements that calm this dosha are <span class="bold-text">Fire, Air and Space</span>, as opposed to Water and Earth. <span class="italic-text">Bitter,
                         pungent and astringent</span> are the tastes that Kaphas should be looking for in their diet.</p>
                     <h2>Signs of imbalance & triggers</h2>
-                    <p><span class="italic-text">Felling unmotivated,
+                    <p><span class="italic-text">Feeling unmotivated,
                         self-isolation and withdrawal from friends,
                         lethargy, laziness, difficulty getting out of bed,
                         overeating or eating for comfort (especially sweet and fatty foods),
                         weight gain, fluid retention, coughs and colds,
                         depression and moodiness.</span>
                         <br> <br>
+                        <!-- Kapha dosha triggers unordered list -->
                         <span class="bold-text">An unbalanced Kapha is triggered by:</span>
                     <ul>
                         <li>Excess dairy in the diet</li>
@@ -206,6 +225,7 @@
                         <li>Sitting around doing nothing for a prolonged amount of time</li>
                     </ul>
                     </p>
+                    <!-- Kapha dosha balancing unordered list -->
                     <h2>Balancing Kapha</h2>
                     <ul>
                         <li>Vigorous exercise (especially in the morning between 6am-10am)</li>
@@ -242,89 +262,6 @@
     <!-- Google charts script -->
     <!--Load the AJAX API-->
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-
-        // Load the Visualization API and the corechart package.
-        google.charts.load('current', { 'packages': ['corechart'] });
-
-        // Set a callback to run when the Google Visualization API is loaded.
-        google.charts.setOnLoadCallback(drawChart);
-
-        // Callback that creates and populates a data table,
-        // instantiates the pie chart, passes in the data and
-        // draws it.
-        function drawChart() {
-
-            // Create the data table.
-            var data = new google.visualization.DataTable();
-            let vataPoints = parseInt(localStorage.getItem('vataPoints'));
-            let pittaPoints = parseInt(localStorage.getItem('pittaPoints'));
-            let kaphaPoints = parseInt(localStorage.getItem('kaphaPoints'));
-            data.addColumn('string', 'Dosha');
-            data.addColumn('number', 'Percentage');
-            data.addRows([
-                ['Vata', vataPoints],
-                ['Pitta', pittaPoints],
-                ['Kapha', kaphaPoints],
-            ]);
-
-            // Set chart options
-            var options = {
-                width: '100%',
-                height: '100%',
-                chartArea: { left: 0, top: 0, width: '100%', height: '100%' },
-                backgroundColor: '#9f7e74',
-                legend: { position: 'none' },
-                tooltip: { textStyle: { fontSize: 22 }, showColorCode: true },
-                sliceVisibilityTreshold: .0,
-                slices: [{ color: '#8accf2', textStyle: { color: 'black' } }, { color: '#f7cf97', textStyle: { color: 'black' } }, { color: '#c3fabb', textStyle: { color: 'black' } }],
-            };
-
-            // Instantiate and draw our chart, passing in some options.
-            var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
-            chart.draw(data, options);
-
-            google.visualization.events.addListener(chart, 'select', function (e) {
-                var selection = chart.getSelection();
-
-                if (selection[0].row === 0) {
-                    // Get the modal
-                    let vataModal = document.getElementById("vata-modal");
-                    //Open the modal
-                    vataModal.style.display = "block";
-                    // Get the <span> element that closes the modal
-                    let closeVata = document.getElementsByClassName("close-vata")[0];
-                    // When the user clicks on <span> (x), close the modal
-                    closeVata.onclick = function () {
-                        vataModal.style.display = "none";
-                    };
-                } else if (selection[0].row === 1) {
-                    // Get the modal
-                    let pittaModal = document.getElementById("pitta-modal");
-                    //Open the modal
-                    pittaModal.style.display = "block";
-                    // Get the <span> element that closes the modal
-                    let closePitta = document.getElementsByClassName("close-pitta")[0];
-                    // When the user clicks on <span> (x), close the modal
-                    closePitta.onclick = function () {
-                        pittaModal.style.display = "none";
-                    };
-                } else {
-                    // Get the modal
-                    let kaphaModal = document.getElementById("kapha-modal");
-                    //Open the modal
-                    kaphaModal.style.display = "block";
-                    // Get the <span> element that closes the modal
-                    let closeKapha = document.getElementsByClassName("close-kapha")[0];
-                    // When the user clicks on <span> (x), close the modal
-                    closeKapha.onclick = function () {
-                        kaphaModal.style.display = "none";
-                    };
-                }
-
-            });
-        }
-    </script>
     <!-- js script -->
     <script src="assets/js/results.js"></script>
 </body>

@@ -1,4 +1,4 @@
-
+//dosha-quiz.html
 
 // All of the quiz questions are found below
 const quizQuestions = [
@@ -211,7 +211,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-//Add event listener to the answer options 
+//Add event listeners to the answer option buttons
 for (let button of buttons) {
     button.addEventListener("click", function () {
         //Add class for selected answer when user clicks on one of the answers
@@ -264,7 +264,7 @@ nextButton.addEventListener('click', function () {
         checkEndQuiz();
     } else {
         //Make sure that an answer is selected
-        // Use sweetAlert 
+        // Use sweetAlert : https://sweetalert.js.org/guides/
         swal({
             title: "Please choose one option!",
             text: `For an accurate result, it's very important that you answer to all of the questions. You don't have to match with all of the points in the answer; just select the one that represents you the best.`
@@ -286,7 +286,11 @@ function checkEndQuiz(){
         displayQuestions();
     } else {
         calculateDosha(vataPoints, pittaPoints, kaphaPoints);
-        //Stores the dosha points in the local storage
+        /**
+         * If there's no more quiz questions to be answered,
+         * store the dosha points in the local storage
+         * and go to the sign up page
+         */
         localStorage.setItem('vataPoints', vataPoints);
         localStorage.setItem('pittaPoints', pittaPoints);
         localStorage.setItem('kaphaPoints', kaphaPoints);

@@ -1,12 +1,10 @@
-// Homepage script
+// Index.html JavaScript
 
-// // When 'Start quiz' button is clicked, go to quiz page
-// document.getElementById("start-quiz").addEventListener("click", function () {
-//     window.location = "../dosha-quiz.html";
-//   });
-
-
-//Learn more modal window
+/**
+ * Modal windows functionalities connected to the
+ * learn more and instructions
+ * buttons in the homepage
+ */
 
 // Get the modal
 var learnMoreModal = document.getElementById("learn-more-modal");
