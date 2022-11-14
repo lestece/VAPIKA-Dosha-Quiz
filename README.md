@@ -135,6 +135,50 @@ After ideating the website structure and the wireframes, and after having decide
 
 ### EXISTING FEATURES
 
+- #### HOMEPAGE
+
+![Homepage](docs/README-images/homepage.png)
+
+The homepage contains:
+
+- a __catchy introduction__ that informs users about the website main purpose 
+
+- a button that opens a modal window containing __more information__ about Ayurveda and generalities that are important for understanding the quiz results
+
+- a button opening a modal window that provides users with instructions on __how to take the quiz__
+
+- a button to __start the quiz__
+
+- #### HOMEPAGE MODAL WINDOWS
+
+![Homepage modals](docs/README-images/homepage-modals.gif)
+
+For easy navigation, modal windows opened through the "Learn more" and "Instructions" buttons in the homepage __can be closed both by clicking on the "close x button" and by clicking anywhere outside of the modal window__.
+
+- #### QUIZ PAGE
+
+![Quiz page](docs/README-images/quiz-page.png)
+
+The quiz page displays each question and its related 3 different answers one below another.
+
+When the "next" button is clicked, the JavaScript _checks that an answer has been selected_ and if so, _the selected answer gets stored and the next question displayed_.
+
+- #### ANSWER SELECTION/UNSELECTION
+
+![Answer selection](docs/README-images/answer-selection.gif)
+
+Event listeneres related to the answer selection are only applied to "next question" button, so that _users can change their mind after selecting one answer and controlling when they're ready to submit their answer and proceed with the next question_.
+
+In case users selected a different answer, __the previous selected one gets unselected__.
+
+- #### UNANSWERED QUESTION
+
+![Unanswered question](docs/README-images/unanswered-question.gif)
+
+For the purpose of getting an accurate result, the quiz is structured so that __each question requires an answer__.
+
+If users try to skip a question or forget to select an answer, __an alert window is displayed__ to inform them about the quiz requirements and prompt them to answer.
+
 ### FEATURES TO IMPLEMENT IN THE FUTURE
 
 ## 4. TESTING
