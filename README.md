@@ -198,8 +198,38 @@ With a _4 seconds timer_, the alert window __redirects to the results page__.
 ![Signup confirmation email](docs/README-images/newsletter-email.png)
 
 If the form is successfully submitted, __users also get a personalized confirmation email__ that displays their name and lets them know what to expect from the Newsletter.
+- - - 
 
+- #### QUIZ RESULT PAGE
+![Quiz result page](docs/README-images/quiz-result.png)
+
+After introducing the users to their dosha, the quiz result page __features a Google Pie chart__ that displays on what percentage each dosha has been scored.
+
+A _color legend_ helps the user understanding the Pie chart more.
+- - -
+- #### PERSONALIZED RESULTS
+![Personalized resuls](docs/README-images/personalized-result.png)
+
+If the user decides to signup to the Newsletter, the __username submitted through the form is stored and displayed in the heading of the results page__. This creates more _emotional engagement_ and the user is reassured that he/she is getting a _tailored result_.
+
+- - - 
+
+- #### INTERACTIVE PIE CHART
+![Interactive Pie Chart](docs/README-images/interactive-pie-chart.gif)
+
+The Pie Chart used to display the quiz results is __fully interactive__: 
+
+- by __hovering__ on each slice, the user gets __the name of the dosha__, it's corresponding __number of questions answered __and, based on the number of the quiz total question, on what __percentage__ that dosha is present.
+
+- by __cliking__ on each slice, a __modal window opens__, giving the user a __full explanation of that specific dosha, and tips and recommendations to keep it in balance__.
+- - - 
 ### FEATURES TO IMPLEMENT IN THE FUTURE
+
+- Adding e-commerce functionality through expanding each dosha detailed explanation and "remedies" by offering a selection of Ayurvedic products that can help balancing that dosha. 
+
+- Changing the question answering system: instead of having to click on the "next question" button at each question, the clicked answer is the one that triggers the new question displaying.
+In addition, the user would be able to go back to the previous questions and, for any reason, change the answer given.
+- - - 
 
 ## 4. TESTING
 
