@@ -22,7 +22,7 @@
  if (userName) {
      userNameSpan.textContent = `${userName}, `;
  } else {
-     resultsHeading.innerHTML = `Your Dosha is ${dosha}!`;
+     resultsHeading.innerHTML = `Your Dosha is <span id="dosha-result">${dosha} </span>!`;
  }
  
  /**
