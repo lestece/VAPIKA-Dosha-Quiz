@@ -5,8 +5,8 @@
 1) [Manual Testing](TESTING.md/#1-manual-testing)
     - [Internal events/links](TESTING.md/#internal-eventslinks)
     - [External links](TESTING.md/#external-links)
-    - [Signup page](TESTING.md/#signup-page)
-    - [Quiz result](TESTING.md/#quiz-result)
+    - [EmailJS](TESTING.md/#emailjs)
+    - [Quiz and quiz result](TESTING.md/#quiz--quiz-result)
 2) [Code Validation](TESTING.md/#2-code-validation)
     - [W3C HTML Validation](TESTING.md/#w3c-html-validation)
     - [W3C (Jigsaw) CSS Validation](TESTING.md/#w3c-jigsaw-css-validation)
@@ -45,22 +45,49 @@
 -When selected, the answer acquires the right style 
 
 -The previous answer correctly deselects if the user changes answer
-
+- - - 
 - #### MANDATORY ANSWER
 ![Mandatory answer testing](docs/TESTING-images/mandatory-answer-testing.gif)
 
 The quiz requires all of the questions to be answered:
 the go to the next question button click correctly triggers the check for an answer to be selected and perfectly displays the SweetAlert window if not.
+- - - 
+- #### SIGNUP FORM INPUTS VALIDATION
+![Signup form inputs validation testing](docs/TESTING-images/signup-form-input-validation.gif)
+The text and email inputs in the Newsletter signup form are validated
+- - - 
+- #### SIGNUP SWEETALERT WINDOW
+![Signup SweetAlert window testing](docs/TESTING-images/signup-sweetalert-testing.gif)
 
+If the signup form is correctly submitted, the SweetAlert window successfully shows up for the right amount of time set in the timer (4secs) and redirects to the results page.
+- - - 
+- #### PIE CHART
+![Pie chart testing](docs/TESTING-images/pie-chart-testing.gif)
+The Pie chart in the results page behaves as planned/as it's supposed to:
+
+-On hover, the pie chart slices show the corresponding dosha name, number of answers scored and percentage.
+
+-On click, the slice correctly opens the modal window containing the information for that specific dosha
+- - - 
 ### EXTERNAL LINKS
 ![Social external links testing](docs/TESTING-images//social-external-links-testing.gif)
 
 All social media icon links open on a new page.
+- - - 
+### EMAILJS
+![EmailJS Testing](docs/README-images/newsletter-email.png)
+The signup form submission successfully sends a confirmation email to the user based on the email address stated in the form.
 
-### SIGNUP PAGE
+Also the username is shown to be correctly stored and displayed in the email intro.
 
-### QUIZ RESULT
+To make sure the feature is working, I tested it using various email addresses (mine or relative's/friend's) ones and different names.
+- - -
+### QUIZ & QUIZ RESULT
+The quiz logic revolves around the concept that the user dominant doshas are the ones that get more answers: each question has three possible answers and each answer corresponds to a specific dosha. 
+To make things easier, answer 1 [0] always corresponds to Vata, answer 2[1] to Pitta and answer 3 [2] to Kapha.
 
+Knowing this, I manually tested all of the possible combinations, including a Tridoshic case (all doshas get equal points) to make sure the results are being calculated correctly.
+- - - 
 ## 2) CODE VALIDATION
 
 ### W3C HTML VALIDATION
