@@ -58,7 +58,7 @@ Users are adults who want to:
 - being left with the feeling of knowing more about themselves after taking the quiz and more knowledgeable about how to tackle possible health issues
 
 [Back to top ↑](README.md/#vapika-dosha-quiz)
-
+- - - 
 ### BUSINESS GOALS
 
 - to provide users with a quiz to discover their dosha and interactive/entertaining information about Ayurveda
@@ -66,7 +66,7 @@ Users are adults who want to:
 - keep the users engaged with the brand through a subscription to a monthly Newsletter
 
 [Back to top ↑](README.md/#vapika-dosha-quiz)
-
+- - -
 ### WIREFRAMES
 
 [See wireframes here](docs/wireframes).
@@ -74,7 +74,7 @@ Users are adults who want to:
 All wireframes were created with [Figma](https://www.figma.com/).
 
 [Back to top ↑](README.md/#vapika-dosha-quiz)
-
+- - - 
 ### DESIGN
 
 - #### LOGO
@@ -82,7 +82,7 @@ All wireframes were created with [Figma](https://www.figma.com/).
 VAPIKA logo was created by me using [Canva](https://www.canva.com/).
 
 ![Vapika Logo](assets/images/vapika-logo.png)
-
+- - - 
 - #### COLORS
 
 ![Vapika Palette](docs/README-images/vapika-palette.png)
@@ -95,14 +95,14 @@ The palette was generated from the background image found in the desktop design 
 
 - I wanted to keep a good contrast across all of the pages and their elements so a regular __black color__ was used for most of the paragraphs, and for some buttons text. 
  
-
+- - - 
 [Back to top ↑](README.md/#vapika-dosha-quiz)
 
 - #### ICONS
   Icons were needed for the social media links and have been taken from [FontAwesome](https://fontawesome.com/).
 
 [Back to top ↑](README.md/#vapika-dosha-quiz)
-
+- - - 
 - #### TYPOGRAPHY
 
 The chosen fonts for the website are:
@@ -112,7 +112,7 @@ The chosen fonts for the website are:
 2. **Sen**: a friendly sans-serif used for paragraphs due to its easy readability.
 
 [Back to top ↑](README.md/#vapika-dosha-quiz)
-
+- - - 
 - #### IMAGES
 
 The image used for the homepage background for large screen designs, was taken from [Unsplash](https://unsplash.com/).
@@ -122,7 +122,7 @@ The images representing the natural elements that introduce each dosha result we
 All images were optimized using [TinyPNG](https://tinypng.com/).
 
 [Back to top ↑](README.md/#vapika-dosha-quiz)
-
+- - - 
 - #### MOCKUPS
 
 After ideating the website structure and the wireframes, and after having decided the design elements, I've created high-fidelity mockups of all of the pages to make tangible the idea in my mind and have a detailed guide to follow when coding.
@@ -130,7 +130,7 @@ After ideating the website structure and the wireframes, and after having decide
 [See mockups here](docs/mockups)
 
 [Back to top ↑](README.md/#vapika-dosha-quiz)
-
+- - - 
 ## 3. FEATURES
 
 ### EXISTING FEATURES
@@ -148,13 +148,13 @@ The homepage contains:
 - a button opening a modal window that provides users with instructions on __how to take the quiz__
 
 - a button to __start the quiz__
-
+- - - 
 - #### HOMEPAGE MODAL WINDOWS
 
 ![Homepage modals](docs/README-images/homepage-modals.gif)
 
 For easy navigation, modal windows opened through the "Learn more" and "Instructions" buttons in the homepage __can be closed both by clicking on the "close x button" and by clicking anywhere outside of the modal window__.
-
+- - - 
 - #### QUIZ PAGE
 
 ![Quiz page](docs/README-images/quiz-page.png)
@@ -162,7 +162,7 @@ For easy navigation, modal windows opened through the "Learn more" and "Instruct
 The quiz page displays each question and its related 3 different answers one below another.
 
 When the "next" button is clicked, the JavaScript _checks that an answer has been selected_ and if so, _the selected answer gets stored and the next question displayed_.
-
+- - - 
 - #### ANSWER SELECTION/UNSELECTION
 
 ![Answer selection](docs/README-images/answer-selection.gif)
@@ -170,7 +170,7 @@ When the "next" button is clicked, the JavaScript _checks that an answer has bee
 Event listeneres related to the answer selection are only applied to "next question" button, so that _users can change their mind after selecting one answer and controlling when they're ready to submit their answer and proceed with the next question_.
 
 In case users selected a different answer, __the previous selected one gets unselected__.
-
+- - - 
 - #### UNANSWERED QUESTION
 
 ![Unanswered question](docs/README-images/unanswered-question.gif)
@@ -178,6 +178,26 @@ In case users selected a different answer, __the previous selected one gets unse
 For the purpose of getting an accurate result, the quiz is structured so that __each question requires an answer__.
 
 If users try to skip a question or forget to select an answer, __an alert window is displayed__ to inform them about the quiz requirements and prompt them to answer.
+- - - 
+- #### NEWSLETTER SIGNUP FORM
+
+![Signup form](docs/README-images/signup-page.png)
+
+After the quiz completion, users are redirected to a page containing a _Newsletter signup form_ that requires them to input their _name, email address and a quiz feedback_.
+
+The Newsletter signing up is completely __optional__ and users can skip it by simply clicking on the "Skip and go to results button".
+- - - 
+- #### NEWSLETTER SIGNUP CONFIRMATION ALERT WINDOW
+![Signup confirmation alert](docs/README-images/signup-confirmation-alert.gif)
+
+If the form is correctly submitted, __an alert window confirms users that they've successfully subscribed to the Newsletter__.
+
+With a _4 seconds timer_, the alert window __redirects to the results page__.
+- - - 
+- #### NEWSLETTER SIGNUP CONFIRMATION EMAIL
+![Signup confirmation email](docs/README-images/newsletter-email.png)
+
+If the form is successfully submitted, __users also get a personalized confirmation email__ that displays their name and lets them know what to expect from the Newsletter.
 
 ### FEATURES TO IMPLEMENT IN THE FUTURE
 
