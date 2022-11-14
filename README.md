@@ -233,6 +233,10 @@ In addition, the user would be able to go back to the previous questions and, fo
 
 ## 4. TESTING
 
+All of the information regarding the testing can be found [here](TESTING.md).
+
+[Back to top ↑](README.md/#vapika-dosha-quiz)
+- - - 
 ## 5. TECHNOLOGIES USED
 
 ### Main languages used
