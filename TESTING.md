@@ -123,6 +123,28 @@ CSS code passes through the JigSaw validator without issues.
 No significant issues come back when the JavaScript code is passed through JSHint.
 - - - 
 ## 3) RESPONSIVENESS TESTING
+ All of the responsiveness testing has been conducted using Google Chrome Developer Tools and its devices and "responsive" modality. 
+
+- Homepage
+![Homepage responsiveness](docs/TESTING-images/homepage-responsiveness.gif)
+
+- Homepage modal windows responsiveness
+![Homepage modal window responsiveness](docs/TESTING-images/modals-responsiveness.gif)
+
+- Quiz page
+![Quiz responsiveness](docs/TESTING-images/quiz-responsiveness.gif)
+
+- Signup page
+![Signup form responsiveness](docs/TESTING-images/signup-responsiveness.gif)
+
+- Results page
+![Results page responsiveness](docs/TESTING-images/results-responsiveness.gif)
+
+- Dosha modal windows
+![Dosha modal windows responsiveness](docs/TESTING-images/dosha-modal-responsiveness.gif)
+
+
+
 
 ### HOMEPAGE RESPONSIVENESS
 
