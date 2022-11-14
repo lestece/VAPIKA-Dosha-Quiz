@@ -30,7 +30,7 @@
 6. [CREDITS](#6-credits)
 7. [DEPLOYMENT](#7-deployment)
 8. [ACKNOWLEDGEMENTS](#8-acknowledgements)
-
+- - -
 ## 1. INTRODUCTION
 
 This is an interactive front-end site created to provide users with a quiz __to discover their unique Ayurvedic Dosha and obtain lifestyle/diet recommendations based on the quiz result__.
@@ -223,6 +223,11 @@ The Pie Chart used to display the quiz results is __fully interactive__:
 
 - by __cliking__ on each slice, a __modal window opens__, giving the user a __full explanation of that specific dosha, and tips and recommendations to keep it in balance__.
 - - - 
+- #### FOOTER
+![Footer](docs/README-images/footer.png)
+
+The footer is consistent across all of the pages and contains the social media buttons that open on a new page.
+
 ### FEATURES TO IMPLEMENT IN THE FUTURE
 
 - Adding e-commerce functionality through expanding each dosha detailed explanation and "remedies" by offering a selection of Ayurvedic products that can help balancing that dosha. 
