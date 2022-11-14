@@ -91,11 +91,37 @@ Knowing this, I manually tested all of the possible combinations, including a Tr
 ## 2) CODE VALIDATION
 
 ### W3C HTML VALIDATION
+- Homepage
+![Homepage html validation](docs/TESTING-images/homepage-validation.png)
+- Quiz page
+![Quiz page html validation](docs/TESTING-images/quiz-page-validation.png)
+- Signup page
+![Signup page html validation](docs/TESTING-images/signup-page-validation.png)
+- Results page
+![Results page html validation](docs/TESTING-images/results-page-validated.png)
 
+All html pages are validated and come back with no errors or warnings.
+- - - 
 ### W3C (JIGSAW) CSS VALIDATION
+![CSS validation](docs/TESTING-images/css-validation.png)
+
+CSS code passes through the JigSaw validator without issues.
 
 ### JSHINT JAVASCRIPT VALIDATION
+- Script.js
+![Script js validation](docs/TESTING-images/script-js-validation.png)
 
+- Quiz.js
+![Quiz js validation](docs/TESTING-images/quiz-js-validation.png)
+
+- Sign-up.js
+![Signup js validation](docs/TESTING-images/signup-js-validation.png)
+
+- Results.js
+![Results js validation](docs/TESTING-images/results-js-validation.png)
+
+No significant issues come back when the JavaScript code is passed through JSHint.
+- - - 
 ## 3) RESPONSIVENESS TESTING
 
 ### HOMEPAGE RESPONSIVENESS
