@@ -3,7 +3,9 @@
 /**
  * Modal windows functionalities connected to the
  * learn more and instructions
- * buttons in the homepage
+ * buttons in the homepage.
+ * From the tutorial at
+ * https://www.w3schools.com/howto/howto_css_modals.asp
  */
 
 // Get the modal

@@ -270,6 +270,40 @@ All of the information regarding the testing can be found [here](TESTING.md).
 
 ## 6. CREDITS
 
+### Media
+
+- The author of the background image in the homepage for large screen resolutions is by [Stephanie Greene](https://unsplash.com/@lovestephaniegreene) and was taken from [Unsplash](https://unsplash.com/)
+
+- The social media icons were sourced from [FontAwesome](https://fontawesome.com/)
+
+- The title bar icon was taken from [Flaticon](https://www.flaticon.com/) and created by [Icongeek26](https://www.flaticon.com/authors/icongeek26)
+- - - 
+### Code
+
+- The quiz __thought process/approach__ has been inspired by the following tutorials: [simplestepsCode](https://simplestepscode.com/javascript-quiz-tutorial/), [sitepoint](https://www.sitepoint.com/simple-javascript-quiz/), [webdevSimplified](https://www.youtube.com/watch?v=riDzcEQbX6k)
+
+- The modal windows connected to the "Learn More" and "Instructions" buttons in the homepage were created following [this tutorial](https://www.w3schools.com/howto/howto_css_modals.asp) on __W3schools__
+
+- The __SweetAlert__ window that opens when the "Next question" button is clicked during the quiz and an answer has not been selected, was implemented following the guide at [this link](https://sweetalert.js.org/guides/)
+
+- The __EmailJS__ setup was made possible thanks to the very detailed and helpful guide at [this link](https://martinezjf2.medium.com/how-to-setup-emailjs-33809350f0f8)
+
+- The second __SweetAlert__ implemented in the website, that opens when the user correctly submits the signup form and redirects to the results page, was adapted to the example sweetalert containing a timer found [here](https://sweetalert2.github.io/)
+
+- The __Google Pie Chart__ was achieved following the instructions on [Google Charts](https://developers-dot-devsite-v2-prod.appspot.com/chart/interactive/docs/gallery/piechart)
+
+- To add event listeners to the Pie Chart slices to open the modal windows when they're clicked, I followed the instructions given in the [Google Chart guide](https://developers-dot-devsite-v2-prod.appspot.com/chart/interactive/docs/gallery/piechart#Methods) and researching on __StackOverflow__ (finding [this question](https://stackoverflow.com/questions/14768507/google-pie-chart-onclick-issue) extremely useful)
+
+All of the code implemented from other sources/tutorial has been referenced in the comments accompanying the code.
+
+- - - 
+### Content
+All of the information related to Ayurveda and the characteristics and suggestions for each dosha have been taken from [The Yogic Kitchen](https://books.google.co.uk/books/about/The_Yogic_Kitchen.html?id=Om5uDwAAQBAJ&source=kp_book_description&redir_esc=y) by [Jody Vassallo](https://www.jodyvassallo.com/).
+
+The quiz questions and answers are a combination of the following quizes found online: [oneWorldAyurveda](https://www.oneworldayurveda.com/free-dosha-quiz/) and [jasmineHemsley](https://www.jasminehemsley.com/find-your-dosha).
+
+[Back to top ↑](README.md/#vapika-dosha-quiz)
+- - - 
 ## 7. DEPLOYMENT
 
 ## 8. ACKNOWLEDGEMENTS

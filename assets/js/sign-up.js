@@ -1,4 +1,9 @@
 //Signup page js
+/**
+ * The following code has been written following
+ * the tutorial at the following address:
+ * https://martinezjf2.medium.com/how-to-setup-emailjs-33809350f0f8
+ */
 // Connect to my EmailJS account using my Public Key
 (function() {
     emailjs.init(
