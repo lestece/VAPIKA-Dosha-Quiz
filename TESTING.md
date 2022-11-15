@@ -233,6 +233,16 @@ Fixed by adjusting margins and paddins.
 When I started the testing, I noticed that the calculatedosha function wasn't working correctly: in fact, when all of the doshas scored the same amount of points, the "Tridoshic" result wasn't calculated as it was supposed to.
 
 It was fixed by adding to the condition an AND operator to evaluate vata dosha being equal to pitta dosha AND vata dosha being equal to kapha dosha.
+- - - 
+
+9) Console errors in the sign-up page
+![Console errors signup page](docs/TESTING-images/console-errors.png)
+
+When I asked the peers on Slack for a review of the website, _Harry_ noticed that 2 errors were appearing in the console regarding the sign-up page:
+
+One error was coming from a SweetAlert2 incorrect script on line 67 of the sign-up.html: easily fixed by deleting it.
+
+The second error was removed by deleting the setInterval method from the swal.fire function: I tried to research and understand what that method was doing in the alert window and its purpose in the function but without success.
 
 [Back to top ↑](TESTING.md/#vapika-dosha-quiz-testing)
 - - - 

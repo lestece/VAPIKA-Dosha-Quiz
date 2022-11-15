@@ -72,16 +72,6 @@ function sendMail() {
                                     .querySelector(
                                         'b'
                                     );
-                                timerInterval
-                                    =
-                                    setInterval(
-                                        () => {
-                                            b.textContent =
-                                                Swal
-                                                .getTimerLeft();
-                                        },
-                                        100
-                                    );
                             },
                             willClose: () => {
                                 clearInterval
