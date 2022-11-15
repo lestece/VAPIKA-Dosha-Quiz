@@ -37,8 +37,6 @@
 -The Learn More and Instructions buttons successfully open the modal windows
 
 -The modal windows correctly close either triggered by the close x click or by clicking anywhere outside of the modal windows
-
-[Back to top ↑](TESTING.md/#vapika-dosha-quiz-testing)
 - - -
 - #### SELECT AND DESELECT ANSWERS
 ![Select and deselect answers testing](docs/TESTING-images/select-deselect-answer-testing.gif)
@@ -48,29 +46,21 @@
 -When selected, the answer acquires the right style 
 
 -The previous answer correctly deselects if the user changes answer
-
-[Back to top ↑](TESTING.md/#vapika-dosha-quiz-testing)
 - - - 
 - #### MANDATORY ANSWER
 ![Mandatory answer testing](docs/TESTING-images/mandatory-answer-testing.gif)
 
 The quiz requires all of the questions to be answered:
 the go to the next question button click correctly triggers the check for an answer to be selected and perfectly displays the SweetAlert window if not.
-
-[Back to top ↑](TESTING.md/#vapika-dosha-quiz-testing)
 - - - 
 - #### SIGNUP FORM INPUTS VALIDATION
 ![Signup form inputs validation testing](docs/TESTING-images/signup-form-input-validation.gif)
 The text and email inputs in the Newsletter signup form are validated
-
-[Back to top ↑](TESTING.md/#vapika-dosha-quiz-testing)
 - - - 
 - #### SIGNUP SWEETALERT WINDOW
 ![Signup SweetAlert window testing](docs/TESTING-images/signup-sweetalert-testing.gif)
 
 If the signup form is correctly submitted, the SweetAlert window successfully shows up for the right amount of time set in the timer (4secs) and redirects to the results page.
-
-[Back to top ↑](TESTING.md/#vapika-dosha-quiz-testing)
 - - - 
 - #### PIE CHART
 ![Pie chart testing](docs/TESTING-images/pie-chart-testing.gif)
@@ -79,15 +69,11 @@ The Pie chart in the results page behaves as planned/as it's supposed to:
 -On hover, the pie chart slices show the corresponding dosha name, number of answers scored and percentage.
 
 -On click, the slice correctly opens the modal window containing the information for that specific dosha
-
-[Back to top ↑](TESTING.md/#vapika-dosha-quiz-testing)
 - - - 
 ### EXTERNAL LINKS
 ![Social external links testing](docs/TESTING-images//social-external-links-testing.gif)
 
 All social media icon links open on a new page.
-
-[Back to top ↑](TESTING.md/#vapika-dosha-quiz-testing)
 - - - 
 ### EMAILJS
 ![EmailJS Testing](docs/README-images/newsletter-email.png)
@@ -96,8 +82,6 @@ The signup form submission successfully sends a confirmation email to the user b
 Also the username is shown to be correctly stored and displayed in the email intro.
 
 To make sure the feature is working, I tested it using various email addresses (mine or relative's/friend's) ones and different names.
-
-[Back to top ↑](TESTING.md/#vapika-dosha-quiz-testing)
 - - -
 ### QUIZ & QUIZ RESULT
 The quiz logic revolves around the concept that the user dominant doshas are the ones that get more answers: each question has three possible answers and each answer corresponds to a specific dosha. 
@@ -120,15 +104,11 @@ Knowing this, I manually tested all of the possible combinations, including a Tr
 ![Results page html validation](docs/TESTING-images/results-page-validated.png)
 
 All html pages are validated with [W3C HTML validator](https://validator.w3.org/)and come back with no errors or warnings.
-
-[Back to top ↑](TESTING.md/#vapika-dosha-quiz-testing)
 - - - 
 ### W3C (JIGSAW) CSS VALIDATION
 ![CSS validation](docs/TESTING-images/css-validation.png)
 
 CSS code passes through the [JigSaw CSS validator](https://jigsaw.w3.org/css-validator/) without issues.
-
-[Back to top ↑](TESTING.md/#vapika-dosha-quiz-testing)
 - - - 
 ### JSHINT JAVASCRIPT VALIDATION
 - Script.js
@@ -152,8 +132,6 @@ No significant issues come back when the JavaScript code is passed through [JSHi
 All of the website pages are fully responsive.
 
 The responsiveness testing has been conducted using Google Chrome Developer Tools, both on the devices available and on "responsive" modality. 
-
-[Back to top ↑](TESTING.md/#vapika-dosha-quiz-testing)
 - - - 
 - ### HOMEPAGE RESPONSIVENESS
 ![Homepage responsiveness](docs/TESTING-images/homepage-responsiveness.gif)
@@ -201,8 +179,6 @@ VAPIKA Dosha Quiz has been tested for browser compatibility on:
 
 The first time the homepage HTML was run through the W3C validator service, an error was returned.
 Fixed by removing the type attribute in the icon link tag.
-
-[Back to top ↑](TESTING.md/#vapika-dosha-quiz-testing)
 - - -
 
 2) Signup page HTML validation errors and warning
@@ -213,8 +189,6 @@ The sign-up.html file returned two errors and one warning during the code valida
 The two errors were related to the "method" and "action" attributes in the form element being empty. I decided to remove those attributes because of the default actions of the form element.
 
 The warning was associated to the "type" attribute in the Javascript resources, and fixed by deleting it since it's unnecessary.
-
-[Back to top ↑](TESTING.md/#vapika-dosha-quiz-testing)
 - - - 
 
 3) Results page HTML validation errors and warning
@@ -224,15 +198,12 @@ In the results page, the two errors that came back during the code validation we
 To fix it, the opening p tag was closed straight before the list span.
 
 Again, a warning relating the "type" attribute in the Javascript resources was encountered and fixed by removing it.
-[Back to top ↑](TESTING.md/#vapika-dosha-quiz-testing)
 - - - 
 4) JSHint fixed validation issues
 ![Quiz js validation issue](docs/TESTING-images/quiz-js-validation-warning.png)
 ![Signup js validation issue](docs/TESTING-images/signup-js-validation-warning.png)
 
 The first time I run the scripts into JSHint validator, a considerable amount of missing semicolons was found. All of them has been added in the pointed places.
-
-[Back to top ↑](TESTING.md/#vapika-dosha-quiz-testing)
 - - - 
 
 5) 404 Errors after deployment
@@ -242,8 +213,6 @@ The deployed website on github-pages was returning 404 errors when trying to acc
 The issue showed itself in proximity/during my second mentor call, and it was fixed thanks to my mentor help.
 
 It was clear that the problem was in the file paths I had used to link to the pages stated above: after trying different approaches, the deployed website accepted as a file path to the root directory the format "./filename.html", and the 404 issues were fixed.
-
-[Back to top ↑](TESTING.md/#vapika-dosha-quiz-testing)
 - - - 
 6) Footer floating in the middle of the screen
 
@@ -251,8 +220,6 @@ I started to tackle the responsiveness and styling of the webpage only after the
 So during that call, my mentor made me notice that the footer of the website was floating in the middle of the page in the homepage, due to the fact that there wasn't enought content to push it to the bottom of the page.
 
 To solve this, the footer has been given a fixed position following the tutorial on [W3schools](https://www.w3schools.com/howto/howto_css_fixed_footer.asp).
-
-[Back to top ↑](TESTING.md/#vapika-dosha-quiz-testing)
 - - - 
 
 7) Main content hidden behind footer
@@ -260,8 +227,6 @@ To solve this, the footer has been given a fixed position following the tutorial
 After fixing the footer issue and positioning it to "fixed", the content in the main div was staying hidden behind the footer. 
 
 Fixed by adjusting margins and paddins.
-
-[Back to top ↑](TESTING.md/#vapika-dosha-quiz-testing)
 - - - 
 8) Quiz Tridoshic condition not working
 
@@ -288,8 +253,6 @@ They all score above 90 in all of the categories: Performance, Accessibility, Be
 
 - Results page lighthouse report
 ![Results page lighthouse report](docs/TESTING-images/results-lighthouse-report.png)
-
-[Back to top ↑](TESTING.md/#vapika-dosha-quiz-testing)
 - - - 
 
 ## 7) USER TESTING

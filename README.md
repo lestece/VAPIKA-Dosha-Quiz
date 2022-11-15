@@ -40,9 +40,7 @@ The quiz contains 18 questions and each questions has 3 different answer options
 The result is based on which doshas score the highest points in the quiz.
 
 I've created this quiz to showcase my HTML, CSS and JavaScript knowledge, along with my skills relating responsitivity, accessibility and UX Design.
-
-[Back to top ↑](README.md/#vapika-dosha-quiz)
-
+- - - 
 ## 2. USER EXPERIENCE DESIGN
 
 ### USER PERSONA & THEIR GOALS/NEEDS
@@ -57,15 +55,12 @@ Users are adults who want to:
 - being redirected to an interactive/engaging result after taking the quiz, where information given is not too crowded but clear and controlled by the user input
 - being left with the feeling of knowing more about themselves after taking the quiz and more knowledgeable about how to tackle possible health issues
 
-[Back to top ↑](README.md/#vapika-dosha-quiz)
 - - - 
 ### BUSINESS GOALS
 
 - to provide users with a quiz to discover their dosha and interactive/entertaining information about Ayurveda
 - promote the brand name so that in the future it could become a wider Ayurvedic services provider
 - keep the users engaged with the brand through a subscription to a monthly Newsletter
-
-[Back to top ↑](README.md/#vapika-dosha-quiz)
 - - -
 ### WIREFRAMES
 
@@ -95,13 +90,11 @@ The palette was generated from the background image found in the desktop design 
 
 - I wanted to keep a good contrast across all of the pages and their elements so a regular __black color__ was used for most of the paragraphs, and for some buttons text. 
  
-- - - 
-[Back to top ↑](README.md/#vapika-dosha-quiz)
+- - -
 
 - #### ICONS
   Icons were needed for the social media links and have been taken from [FontAwesome](https://fontawesome.com/).
 
-[Back to top ↑](README.md/#vapika-dosha-quiz)
 - - - 
 - #### TYPOGRAPHY
 
@@ -111,7 +104,6 @@ The chosen fonts for the website are:
 
 2. **Sen**: a friendly sans-serif used for paragraphs due to its easy readability.
 
-[Back to top ↑](README.md/#vapika-dosha-quiz)
 - - - 
 - #### IMAGES
 
@@ -121,7 +113,6 @@ The images representing the natural elements that introduce each dosha result we
 
 All images were optimized using [TinyPNG](https://tinypng.com/).
 
-[Back to top ↑](README.md/#vapika-dosha-quiz)
 - - - 
 - #### MOCKUPS
 
@@ -228,19 +219,23 @@ The Pie Chart used to display the quiz results is __fully interactive__:
 
 The footer is consistent across all of the pages and contains the social media buttons that open on a new page.
 
+[Back to top ↑](README.md/#vapika-dosha-quiz)
+- - - 
+
 ### FEATURES TO IMPLEMENT IN THE FUTURE
 
 - Adding e-commerce functionality through expanding each dosha detailed explanation and "remedies" by offering a selection of Ayurvedic products that can help balancing that dosha. 
 
 - Changing the question answering system: instead of having to click on the "next question" button at each question, the clicked answer is the one that triggers the new question displaying.
 In addition, the user would be able to go back to the previous questions and, for any reason, change the answer given.
+
+[Back to top ↑](README.md/#vapika-dosha-quiz)
 - - - 
 
 ## 4. TESTING
 
 All of the information regarding the testing can be found [here](TESTING.md).
 
-[Back to top ↑](README.md/#vapika-dosha-quiz)
 - - - 
 ## 5. TECHNOLOGIES USED
 
@@ -248,9 +243,6 @@ All of the information regarding the testing can be found [here](TESTING.md).
 - HTML
 - CSS
 - JAVASCRIPT
-
-[Back to top ↑](README.md/#vapika-dosha-quiz)
-- - - 
 ### Frameworks, Libraries and Programs used
 - [GitPod](https://gitpod.io): used for writing this website code, committing and pushing to GitHub.
 - [GitHub](https://github.com/): used for hosting, storing and deploying the project
