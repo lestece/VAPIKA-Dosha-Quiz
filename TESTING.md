@@ -13,10 +13,11 @@
     - [JSHint JavaScript Validation](TESTING.md/#jshint-javascript-validation)
 3) [Responsiveness testing](TESTING.md/#3-responsiveness-testing)
     - [Homepage responsiveness](TESTING.md/#homepage-responsiveness)
+    - [Homepage modal windows responsiveness](TESTING.md/#homepage-modal-windows-responsiveness)
     - [Quiz responsiveness](TESTING.md/#quiz-responsiveness)
     - [Signup page responsiveness](TESTING.md/#signup-page-responsiveness)
     - [Quiz result responsiveness](TESTING.md/#quiz-result-responsiveness)
-    - [Modal windows responsiveness](TESTING.md/#modal-window-responsiveness)
+    - [Dosha modal windows responsiveness](TESTING.md/#dosha-modal-window-responsiveness)
 4) [Browser compatibility](TESTING.md/#4-browser-compatibility)
 5) [Bugs and fixes](TESTING.md/#5-bugs-and-fixes)
 6) [Lighthouse reports](TESTING.md/#6-ligthouse-reports)
@@ -36,6 +37,8 @@
 -The Learn More and Instructions buttons successfully open the modal windows
 
 -The modal windows correctly close either triggered by the close x click or by clicking anywhere outside of the modal windows
+
+[Back to top ↑](TESTING.md/#vapika-dosha-quiz-testing)
 - - -
 - #### SELECT AND DESELECT ANSWERS
 ![Select and deselect answers testing](docs/TESTING-images/select-deselect-answer-testing.gif)
@@ -45,21 +48,29 @@
 -When selected, the answer acquires the right style 
 
 -The previous answer correctly deselects if the user changes answer
+
+[Back to top ↑](TESTING.md/#vapika-dosha-quiz-testing)
 - - - 
 - #### MANDATORY ANSWER
 ![Mandatory answer testing](docs/TESTING-images/mandatory-answer-testing.gif)
 
 The quiz requires all of the questions to be answered:
 the go to the next question button click correctly triggers the check for an answer to be selected and perfectly displays the SweetAlert window if not.
+
+[Back to top ↑](TESTING.md/#vapika-dosha-quiz-testing)
 - - - 
 - #### SIGNUP FORM INPUTS VALIDATION
 ![Signup form inputs validation testing](docs/TESTING-images/signup-form-input-validation.gif)
 The text and email inputs in the Newsletter signup form are validated
+
+[Back to top ↑](TESTING.md/#vapika-dosha-quiz-testing)
 - - - 
 - #### SIGNUP SWEETALERT WINDOW
 ![Signup SweetAlert window testing](docs/TESTING-images/signup-sweetalert-testing.gif)
 
 If the signup form is correctly submitted, the SweetAlert window successfully shows up for the right amount of time set in the timer (4secs) and redirects to the results page.
+
+[Back to top ↑](TESTING.md/#vapika-dosha-quiz-testing)
 - - - 
 - #### PIE CHART
 ![Pie chart testing](docs/TESTING-images/pie-chart-testing.gif)
@@ -68,11 +79,15 @@ The Pie chart in the results page behaves as planned/as it's supposed to:
 -On hover, the pie chart slices show the corresponding dosha name, number of answers scored and percentage.
 
 -On click, the slice correctly opens the modal window containing the information for that specific dosha
+
+[Back to top ↑](TESTING.md/#vapika-dosha-quiz-testing)
 - - - 
 ### EXTERNAL LINKS
 ![Social external links testing](docs/TESTING-images//social-external-links-testing.gif)
 
 All social media icon links open on a new page.
+
+[Back to top ↑](TESTING.md/#vapika-dosha-quiz-testing)
 - - - 
 ### EMAILJS
 ![EmailJS Testing](docs/README-images/newsletter-email.png)
@@ -81,12 +96,16 @@ The signup form submission successfully sends a confirmation email to the user b
 Also the username is shown to be correctly stored and displayed in the email intro.
 
 To make sure the feature is working, I tested it using various email addresses (mine or relative's/friend's) ones and different names.
+
+[Back to top ↑](TESTING.md/#vapika-dosha-quiz-testing)
 - - -
 ### QUIZ & QUIZ RESULT
 The quiz logic revolves around the concept that the user dominant doshas are the ones that get more answers: each question has three possible answers and each answer corresponds to a specific dosha. 
 To make things easier, answer 1 [0] always corresponds to Vata, answer 2[1] to Pitta and answer 3 [2] to Kapha.
 
 Knowing this, I manually tested all of the possible combinations, including a Tridoshic case (all doshas get equal points) to make sure the results are being calculated correctly.
+
+[Back to top ↑](TESTING.md/#vapika-dosha-quiz-testing)
 - - - 
 ## 2) CODE VALIDATION
 
@@ -100,13 +119,17 @@ Knowing this, I manually tested all of the possible combinations, including a Tr
 - Results page
 ![Results page html validation](docs/TESTING-images/results-page-validated.png)
 
-All html pages are validated and come back with no errors or warnings.
+All html pages are validated with [W3C HTML validator](https://validator.w3.org/)and come back with no errors or warnings.
+
+[Back to top ↑](TESTING.md/#vapika-dosha-quiz-testing)
 - - - 
 ### W3C (JIGSAW) CSS VALIDATION
 ![CSS validation](docs/TESTING-images/css-validation.png)
 
-CSS code passes through the JigSaw validator without issues.
+CSS code passes through the [JigSaw CSS validator](https://jigsaw.w3.org/css-validator/) without issues.
 
+[Back to top ↑](TESTING.md/#vapika-dosha-quiz-testing)
+- - - 
 ### JSHINT JAVASCRIPT VALIDATION
 - Script.js
 ![Script js validation](docs/TESTING-images/script-js-validation.png)
@@ -120,44 +143,54 @@ CSS code passes through the JigSaw validator without issues.
 - Results.js
 ![Results js validation](docs/TESTING-images/results-js-validation.png)
 
-No significant issues come back when the JavaScript code is passed through JSHint.
+No significant issues come back when the JavaScript code is passed through [JSHint validator](https://jshint.com/).
+
+[Back to top ↑](TESTING.md/#vapika-dosha-quiz-testing)
 - - - 
 ## 3) RESPONSIVENESS TESTING
- All of the responsiveness testing has been conducted using Google Chrome Developer Tools and its devices and "responsive" modality. 
 
-- Homepage
+All of the website pages are fully responsive.
+
+The responsiveness testing has been conducted using Google Chrome Developer Tools, both on the devices available and on "responsive" modality. 
+
+[Back to top ↑](TESTING.md/#vapika-dosha-quiz-testing)
+- - - 
+- ### HOMEPAGE RESPONSIVENESS
 ![Homepage responsiveness](docs/TESTING-images/homepage-responsiveness.gif)
-
-- Homepage modal windows responsiveness
+- - - 
+- ### HOMEPAGE MODAL WINDOWS RESPONSIVENESS
 ![Homepage modal window responsiveness](docs/TESTING-images/modals-responsiveness.gif)
-
-- Quiz page
+- - - 
+- ### QUIZ RESPONSIVENESS
 ![Quiz responsiveness](docs/TESTING-images/quiz-responsiveness.gif)
-
-- Signup page
+- - - 
+- ### SIGNUP PAGE RESPONSIVENESS
 ![Signup form responsiveness](docs/TESTING-images/signup-responsiveness.gif)
-
-- Results page
+- - - 
+- ### QUIZ RESULT RESPONSIVENESS
 ![Results page responsiveness](docs/TESTING-images/results-responsiveness.gif)
-
-- Dosha modal windows
+- - - 
+- ### DOSHA MODAL WINDOW RESPONSIVENESS
 ![Dosha modal windows responsiveness](docs/TESTING-images/dosha-modal-responsiveness.gif)
-
-
-
-
-### HOMEPAGE RESPONSIVENESS
-
-### QUIZ RESPONSIVENESS
-
-### SIGNUP PAGE RESPONSIVENESS
-
-### QUIZ RESULT RESPONSIVENESS
-
-### MODAL WINDOW RESPONSIVENESS
-
+[Back to top ↑](TESTING.md/#vapika-dosha-quiz-testing)
+- - - 
 ## 4) BROWSER COMPATIBILITY
 
+VAPIKA Dosha Quiz has been tested for browser compatibility on:
+
+ - Google Chrome
+ ![Google Chrome compatibility testing](docs/TESTING-images/chrome-compatibility.gif)
+- - - 
+ - Firefox
+![Firefox compatibility testing](docs/TESTING-images/firefox-compatibility.gif)
+- - - 
+ - Microsoft Edge
+![Microsoft Edge compatibility testing](docs/TESTING-images/edge-compatibility.gif)
+- - - 
+ - Opera
+ ![Opera compatibility testing](docs/TESTING-images/opera-compatibility.gif)
+[Back to top ↑](TESTING.md/#vapika-dosha-quiz-testing)
+- - - 
 ## 5) BUGS AND FIXES
 
 ## 6) LIGTHOUSE REPORTS
