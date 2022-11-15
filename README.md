@@ -305,5 +305,48 @@ The quiz questions and answers are a combination of the following quizes found o
 [Back to top ↑](README.md/#vapika-dosha-quiz)
 - - - 
 ## 7. DEPLOYMENT
+The project has been deployed to __GitHub pages__ taking the following steps:
 
+1) In the project repository, locate the _Settings_ tab and click on it
+
+2) Once in the Settings, locate the _Pages_ tab down the side menu and click on it to open the GitHub Pages tab
+
+3) Under "Source", select the _"Main" branch_ from the drop-down menu instead of "None"
+
+4) Once clicking "Save", the page will automatically refresh displaying the link for the successfully deployed website.
+
+![Deployment process](docs/README-images/deploying.gif)
+![Deployed website](docs/README-images/deployed-site.png)
+- - - 
+### FORKING THE REPOSITORY
+
+ 1) In this project repository, locate the _Fork_ button on the top-right corner of the page and click on it. 
+
+ 2) Select an owner for the forked repository and give it a name (by default it will be named VAPIKA-Dosha-Quiz)
+
+ 3) Add a description of the repository if you want to
+
+ 4) Choose whether to copy only the default branch or all of the branches to the new fork (Only the default branch is copied by default)
+
+ 5) Click _Create fork_
+
+![Forking the repository](docs/README-images/how-to-fork.gif) 
+- - -
+### CLONING THE REPOSITORY
+
+1) Locate the _<> Code_ button next to the _Gitpod_ button in this repository and click on it
+
+2) Copy the URL for the repository
+
+3) Open _Git Bash_ and select the location for the cloned directory
+
+4) Paste the URL copied after typing _git clone_
+
+5) After pressing _Enter_ you have your local clone
+
+- - - 
 ## 8. ACKNOWLEDGEMENTS
+
+This website was created for submission as the __Project Portfolio 2__ for the _Diploma in Full Stack Software Development_ with the [Code Institute](https://codeinstitute.net/). 
+
+A special thanks goes to my mentor __Seun__ for her invaluable assistance.
