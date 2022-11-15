@@ -172,6 +172,7 @@ The responsiveness testing has been conducted using Google Chrome Developer Tool
 - - - 
 - ### DOSHA MODAL WINDOW RESPONSIVENESS
 ![Dosha modal windows responsiveness](docs/TESTING-images/dosha-modal-responsiveness.gif)
+
 [Back to top ↑](TESTING.md/#vapika-dosha-quiz-testing)
 - - - 
 ## 4) BROWSER COMPATIBILITY
@@ -189,10 +190,87 @@ VAPIKA Dosha Quiz has been tested for browser compatibility on:
 - - - 
  - Opera
  ![Opera compatibility testing](docs/TESTING-images/opera-compatibility.gif)
+
 [Back to top ↑](TESTING.md/#vapika-dosha-quiz-testing)
 - - - 
 ## 5) BUGS AND FIXES
+### CODE VALIDATION ERRORS AND WARNING
 
+1) Homepage HTML validation error
+![Homepage html validation error](docs/TESTING-images/)
+
+The first time the homepage HTML was run through the W3C validator service, an error was returned.
+Fixed by removing the type attribute in the icon link tag.
+
+[Back to top ↑](TESTING.md/#vapika-dosha-quiz-testing)
+- - -
+
+2) Signup page HTML validation errors and warning
+![Signup page validation errors and warning](docs/TESTING-images/opera-compatibility.gif)
+
+The sign-up.html file returned two errors and one warning during the code validation.
+
+The two errors were related to the "method" and "action" attributes in the form element being empty. I decided to remove those attributes because of the default actions of the form element.
+
+The warning was associated to the "type" attribute in the Javascript resources, and fixed by deleting it since it's unnecessary.
+
+[Back to top ↑](TESTING.md/#vapika-dosha-quiz-testing)
+- - - 
+
+3) Results page HTML validation errors and warning
+![Results page validation errors and warning](docs/TESTING-images/results-page-validation-errors-and-warning.png)
+
+In the results page, the two errors that came back during the code validation were related to the content of the Pitta dosha and Kapha dosha in the modal windows: the unordered list containing the dosha triggers was inside of a paragraph. And paragraphs cannot contain lists in html.
+To fix it, the opening p tag was closed straight before the list span.
+
+Again, a warning relating the "type" attribute in the Javascript resources was encountered and fixed by removing it.
+[Back to top ↑](TESTING.md/#vapika-dosha-quiz-testing)
+- - - 
+4) JSHint fixed validation issues
+![Quiz js validation issue](docs/TESTING-images/quiz-js-validation-warning.png)
+![Signup js validation issue](docs/TESTING-images/signup-js-validation-warning.png)
+
+The first time I run the scripts into JSHint validator, a considerable amount of missing semicolons was found. All of them has been added in the pointed places.
+
+[Back to top ↑](TESTING.md/#vapika-dosha-quiz-testing)
+- - - 
+
+5) 404 Errors after deployment
+
+The deployed website on github-pages was returning 404 errors when trying to access the quiz from the "Take Quiz" button, and when both of the buttons in the signup page were supposed to redirect to the results page.
+
+The issue showed itself in proximity/during my second mentor call, and it was fixed thanks to my mentor help.
+
+It was clear that the problem was in the file paths I had used to link to the pages stated above: after trying different approaches, the deployed website accepted as a file path to the root directory the format "./filename.html", and the 404 issues were fixed.
+
+[Back to top ↑](TESTING.md/#vapika-dosha-quiz-testing)
+- - - 
+6) Footer floating in the middle of the screen
+
+I started to tackle the responsiveness and styling of the webpage only after the second mentor call for this project, because I wanted to focus on the Javascript functionalities first.
+So during that call, my mentor made me notice that the footer of the website was floating in the middle of the page in the homepage, due to the fact that there wasn't enought content to push it to the bottom of the page.
+
+To solve this, the footer has been given a fixed position following the tutorial on [W3schools](https://www.w3schools.com/howto/howto_css_fixed_footer.asp).
+
+[Back to top ↑](TESTING.md/#vapika-dosha-quiz-testing)
+- - - 
+
+7) Main content hidden behind footer
+
+After fixing the footer issue and positioning it to "fixed", the content in the main div was staying hidden behind the footer. 
+
+Fixed by adjusting margins and paddins.
+
+[Back to top ↑](TESTING.md/#vapika-dosha-quiz-testing)
+- - - 
+8) Quiz Tridoshic condition not working
+
+When I started the testing, I noticed that the calculatedosha function wasn't working correctly: in fact, when all of the doshas scored the same amount of points, the "Tridoshic" result wasn't calculated as it was supposed to.
+
+It was fixed by adding to the condition an AND operator to evaluate vata dosha being equal to pitta dosha AND vata dosha being equal to kapha dosha.
+
+[Back to top ↑](TESTING.md/#vapika-dosha-quiz-testing)
+- - - 
 ## 6) LIGTHOUSE REPORTS
 
 ## 7) USER TESTING
