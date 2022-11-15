@@ -245,8 +245,36 @@ All of the information regarding the testing can be found [here](TESTING.md).
 ## 5. TECHNOLOGIES USED
 
 ### Main languages used
+- HTML
+- CSS
+- JAVASCRIPT
 
+[Back to top ↑](README.md/#vapika-dosha-quiz)
+- - - 
 ### Frameworks, Libraries and Programs used
+- [GitPod](https://gitpod.io): used for writing this website code, committing and pushing to GitHub.
+- [GitHub](https://github.com/): used for hosting, storing and deploying the project
+- [Figma](https://www.figma.com/): used for designing the wireframes and mockups for the website in the first phase of the development process
+- [Coolors](https://coolors.co/): to generate the color palette from the background image found in the homepage for desktop
+- [Canva](https://www.canva.com/): for creating the website logo and the dosha introductive images representing the elements
+- [Google Fonts](https://fonts.google.com/): used for importing the fonts for this  website ("Tenor Sans" and "Sen") into the CSS file
+- [FontAwesome](https://fontawesome.com/): used for the social media icons
+- [Flaticon.com](https://www.flaticon.com/): used for the title bar icon
+- [Icoconverter.com](https://www.icoconverter.com/): used for converting the title bar icon into the .ico format
+- [GifCap (by João Moreno)](https://gifcap.dev/): used for creating the gifs from the screen recordings during the testing process (for the TESTING.md) and for this README file.
+- [Freeformatter.com](https://freeformatter.com/): used for formatting all of the HTML pages
+- [Cleancss.com](https://www.cleancss.com/): used for formatting the styles.css file
+- [Beautifier.io](https://beautifier.io/): for beautifying/formatting all the Javascript code 
+- [AmIResponsive](https://ui.dev/amiresponsive): used for capturing a screenshot of how the website look on different screen sizes (screenshot that introduces this README file)
+- [Unsplash](https://unsplash.com/): where the background image in the homepage for large screen was taken from
+- [TinyPNG](https://tinypng.com/): used for compressing and optimizing all of the images used in the website
+- [Google Charts](https://developers.google.com/chart): used for implementing the Pie Chart that displays the doshas in the results page
+- [SweetAlert](https://sweetalert.js.org/guides/): used for the alert window that shows up when a quiz questions is attempted to be skipped
+- [SweetAlert2](https://sweetalert2.github.io/):for implementing the alert window containing a timer that follows the signup button on click and redirects to the results page
+- [EmailJS](https://www.emailjs.com/): used for sending an automatic/personalized email to users when they submit the signup form
+
+[Back to top ↑](README.md/#vapika-dosha-quiz)
+- - - 
 
 ## 6. CREDITS
 

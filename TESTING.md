@@ -197,7 +197,7 @@ VAPIKA Dosha Quiz has been tested for browser compatibility on:
 ### CODE VALIDATION ERRORS AND WARNING
 
 1) Homepage HTML validation error
-![Homepage html validation error](docs/TESTING-images/)
+![Homepage html validation error](docs/TESTING-images/homepage-validation-error.png)
 
 The first time the homepage HTML was run through the W3C validator service, an error was returned.
 Fixed by removing the type attribute in the icon link tag.
@@ -206,7 +206,7 @@ Fixed by removing the type attribute in the icon link tag.
 - - -
 
 2) Signup page HTML validation errors and warning
-![Signup page validation errors and warning](docs/TESTING-images/opera-compatibility.gif)
+![Signup page validation errors and warning](docs/TESTING-images/signup-page-validation-errors.png)
 
 The sign-up.html file returned two errors and one warning during the code validation.
 
