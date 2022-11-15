@@ -273,4 +273,29 @@ It was fixed by adding to the condition an AND operator to evaluate vata dosha b
 - - - 
 ## 6) LIGTHOUSE REPORTS
 
+All of the website pages have been also tested using [Lighthouse Chrome Developer Tool](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=en).
+
+They all score above 90 in all of the categories: Performance, Accessibility, Best Practices and SEO.
+
+- Homepage lighthouse report
+![Homepage lighthouse report](docs/TESTING-images/homepage-lighthouse-report.png)
+
+- Quiz page lighthouse report
+![Quiz page lighthouse report](docs/TESTING-images/quiz-lighthouse-report.png)
+
+- Signup page lighthouse report
+![Signup page lighthouse report](docs/TESTING-images/signup-lighthouse-report.png)
+
+- Results page lighthouse report
+![Results page lighthouse report](docs/TESTING-images/results-lighthouse-report.png)
+
+[Back to top ↑](TESTING.md/#vapika-dosha-quiz-testing)
+- - - 
+
 ## 7) USER TESTING
+The website has also been sent to family, friends and peers on Slack.
+The response/review was very positive and no issues were encountered on their devices.
+
+[Back to top ↑](TESTING.md/#vapika-dosha-quiz-testing)
+
+[⬅ Back to the README.md file](README.md)
