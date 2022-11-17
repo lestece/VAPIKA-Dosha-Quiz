@@ -294,6 +294,8 @@ All of the information regarding the testing can be found [here](TESTING.md).
 
 - To add event listeners to the Pie Chart slices to open the modal windows when they're clicked, I followed the instructions given in the [Google Chart guide](https://developers-dot-devsite-v2-prod.appspot.com/chart/interactive/docs/gallery/piechart#Methods) and researching on __StackOverflow__ (finding [this question](https://stackoverflow.com/questions/14768507/google-pie-chart-onclick-issue) extremely useful)
 
+- To fix the bug related to the Pie Chart responsiveness in the results page, the solution was taken from __StackOverflow__ at [this link](https://stackoverflow.com/questions/8950761/google-chart-redraw-scale-on-window-resize).
+
 All of the code implemented from other sources/tutorial has been referenced in the comments accompanying the code.
 
 - - - 

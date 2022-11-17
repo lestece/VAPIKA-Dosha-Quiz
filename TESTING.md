@@ -146,7 +146,7 @@ The responsiveness testing has been conducted using Google Chrome Developer Tool
 ![Signup form responsiveness](docs/TESTING-images/signup-responsiveness.gif)
 - - - 
 - ### QUIZ RESULT RESPONSIVENESS
-![Results page responsiveness](docs/TESTING-images/results-responsiveness.gif)
+![Results page responsiveness](docs/TESTING-images/results-responsiveness.gif) 
 - - - 
 - ### DOSHA MODAL WINDOW RESPONSIVENESS
 ![Dosha modal windows responsiveness](docs/TESTING-images/dosha-modal-responsiveness.gif)
@@ -243,6 +243,14 @@ When I asked the peers on Slack for a review of the website, _Harry_ noticed tha
 One error was coming from a SweetAlert2 incorrect script on line 67 of the sign-up.html: easily fixed by deleting it.
 
 The second error was removed by deleting the setInterval method from the swal.fire function: I tried to research and understand what that method was doing in the alert window and its purpose in the function but without success.
+- - -
+
+10) Pie Chart responsive only after page refresh 
+![Pie Chart responsiveness issue](docs/TESTING-images/pie-chart-responsive-issue.gif)
+
+When testing the results page for responsiveness with Google Chrome Developer tools, the Pie Chart was adjusting to the resized screen size only after refreshing the page. The issue appeared to be happening only when the screen was being resized for testing, and on the actual devices the page (and Pie Chart) was fully responsive.
+
+I was able to find a solution at this link on [StackOverflow](https://stackoverflow.com/questions/8950761/google-chart-redraw-scale-on-window-resize): a function to call the function to draw the pie chart was created and it gets called when the window is resized and loaded.
 
 [Back to top ↑](TESTING.md/#vapika-dosha-quiz-testing)
 - - - 
