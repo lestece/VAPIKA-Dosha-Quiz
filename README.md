@@ -35,25 +35,25 @@
 
 This is an interactive front-end site created to provide users with a quiz __to discover their unique Ayurvedic Dosha and obtain lifestyle/diet recommendations based on the quiz result__.
 
-The quiz contains 18 questions and each questions has 3 different answer options, that correspond to a specific dosha. 
+The quiz contains 18 questions and each question has 3 different answer options that correspond to a specific dosha. 
 
 The result is based on which doshas score the highest points in the quiz.
 
-I've created this quiz to showcase my HTML, CSS and JavaScript knowledge, along with my skills relating responsitivity, accessibility and UX Design.
+I've created this quiz to showcase my HTML, CSS and JavaScript knowledge, along with my skills relating responsiveness, accessibility and UX Design.
 - - - 
 ## 2. USER EXPERIENCE DESIGN
 
 ### USER PERSONA & THEIR GOALS/NEEDS
 
-Users are adults who want to:
+As a user, I want to:
 
-- discover their unique mind-body composition
-- get clear and concise information about what the quiz does and how to use the results
+- discover my unique mind-body composition
+- get clear and concise information about what the quiz does and how I can use the results
 - take a quiz that is not too time consuming (avoid too many questions)
-- have the option to subscribe to the Newsletter and discover/learn more about their results
+- have the option to subscribe to the Newsletter and discover/learn more about my result
 - have the option to opt out of the Newsletter
-- being redirected to an interactive/engaging result after taking the quiz, where information given is not too crowded but clear and controlled by the user input
-- being left with the feeling of knowing more about themselves after taking the quiz and more knowledgeable about how to tackle possible health issues
+- being redirected to an interactive/engaging result after taking the quiz, where information given is not too crowded but clear and controlled by my inputs
+- being left with the feeling of knowing more about myself after taking the quiz and more knowledgeable about how to tackle possible health issues
 
 - - - 
 ### BUSINESS GOALS
@@ -84,7 +84,7 @@ VAPIKA logo was created by me using [Canva](https://www.canva.com/).
 
 The palette was generated from the background image found in the desktop design using [Coolors](https://coolors.co/).
 
-- __#9F7E74 (beige color)__ has been used for the logo, some backgrounds in the website (buttons and main container), for most headings and for the footer background. Also used as a text color when the background is the color below;
+- __#9F7E74 (beige color)__ has been used for the logo, some backgrounds on the website (buttons and main container), for most headings and for the footer background. Also used as a text color when the background is the color below;
 
 - __#E7E8EA (grey/white color)__ was mostly used in the text appearing on backgrounds of the color stated above (quiz questions, sign up form and results heading), for some other backgrounds (buttons, body background), social media icons in the footer;
 
@@ -116,7 +116,7 @@ All images were optimized using [TinyPNG](https://tinypng.com/).
 - - - 
 - #### MOCKUPS
 
-After ideating the website structure and the wireframes, and after having decided the design elements, I've created high-fidelity mockups of all of the pages to make tangible the idea in my mind and have a detailed guide to follow when coding.
+After ideating the website structure and the wireframes, and after having decided on the design elements, I've created high-fidelity mockups of all of the pages to make tangible the idea in my mind and have a detailed guide to follow when coding.
 
 [See mockups here](docs/mockups)
 
@@ -132,7 +132,7 @@ After ideating the website structure and the wireframes, and after having decide
 
 The homepage contains:
 
-- a __catchy introduction__ that informs users about the website main purpose 
+- a __catchy introduction__ that informs users about the website's main purpose 
 
 - a button that opens a modal window containing __more information__ about Ayurveda and generalities that are important for understanding the quiz results
 
@@ -144,7 +144,7 @@ The homepage contains:
 
 ![Homepage modals](docs/README-images/homepage-modals.gif)
 
-For easy navigation, modal windows opened through the "Learn more" and "Instructions" buttons in the homepage __can be closed both by clicking on the "close x button" and by clicking anywhere outside of the modal window__.
+For easy navigation, modal windows opened through the "Learn more" and "Instructions" buttons on the homepage __can be closed both by clicking on the "close x button" and by clicking anywhere outside of the modal window__.
 - - - 
 - #### QUIZ PAGE
 
@@ -158,9 +158,9 @@ When the "next" button is clicked, the JavaScript _checks that an answer has bee
 
 ![Answer selection](docs/README-images/answer-selection.gif)
 
-Event listeneres related to the answer selection are only applied to "next question" button, so that _users can change their mind after selecting one answer and controlling when they're ready to submit their answer and proceed with the next question_.
+Event listeners related to the answer selection are only applied to the "next question" button, so that _users can change their mind after selecting one answer and control when they're ready to submit their answer and proceed with the next question_.
 
-In case users selected a different answer, __the previous selected one gets unselected__.
+In case users select a different answer, __the previous selected one gets unselected__.
 - - - 
 - #### UNANSWERED QUESTION
 
@@ -181,9 +181,9 @@ The Newsletter signing up is completely __optional__ and users can skip it by si
 - #### NEWSLETTER SIGNUP CONFIRMATION ALERT WINDOW
 ![Signup confirmation alert](docs/README-images/signup-confirmation-alert.gif)
 
-If the form is correctly submitted, __an alert window confirms users that they've successfully subscribed to the Newsletter__.
+If the form is correctly submitted, __an alert window confirms to users that they've successfully subscribed to the Newsletter__.
 
-With a _4 seconds timer_, the alert window __redirects to the results page__.
+With a _4 second timer_, the alert window __redirects to the results page__.
 - - - 
 - #### NEWSLETTER SIGNUP CONFIRMATION EMAIL
 ![Signup confirmation email](docs/README-images/newsletter-email.png)
@@ -194,14 +194,14 @@ If the form is successfully submitted, __users also get a personalized confirmat
 - #### QUIZ RESULT PAGE
 ![Quiz result page](docs/README-images/quiz-result.png)
 
-After introducing the users to their dosha, the quiz result page __features a Google Pie chart__ that displays on what percentage each dosha has been scored.
+After introducing the users to their dosha, the quiz result page __features a Google Pie chart__ that displays what percentage each dosha has been scored.
 
-A _color legend_ helps the user understanding the Pie chart more.
+A _color legend_ helps the user understand the Pie chart more.
 - - -
 - #### PERSONALIZED RESULTS
 ![Personalized resuls](docs/README-images/personalized-result.png)
 
-If the user decides to signup to the Newsletter, the __username submitted through the form is stored and displayed in the heading of the results page__. This creates more _emotional engagement_ and the user is reassured that he/she is getting a _tailored result_.
+If the user decides to signup to the Newsletter, the __username submitted through the form is stored and displayed in the results page heading__. This creates more _emotional engagement_ and the user is reassured that he/she is getting a _tailored result_.
 
 - - - 
 
@@ -224,7 +224,7 @@ The footer is consistent across all of the pages and contains the social media b
 
 ### FEATURES TO IMPLEMENT IN THE FUTURE
 
-- Adding e-commerce functionality through expanding each dosha detailed explanation and "remedies" by offering a selection of Ayurvedic products that can help balancing that dosha. 
+- Adding e-commerce functionality through expanding each dosha's detailed explanation and "remedies" by offering a selection of Ayurvedic products that can help balance that dosha. 
 
 - Changing the question answering system: instead of having to click on the "next question" button at each question, the clicked answer is the one that triggers the new question displaying.
 In addition, the user would be able to go back to the previous questions and, for any reason, change the answer given.
