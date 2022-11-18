@@ -330,7 +330,7 @@ function() {
         // Use sweetAlert : https://sweetalert.js.org/guides/
         swal({
             title: "Please choose one option!",
-            text: `For an accurate result, it's very important that you answer to all of the questions. You don't have to match with all of the points in the answer; just select the one that represents you the best.`
+            text: `For an accurate result, it's very important that you answer all of the questions.`
         });
     }
 

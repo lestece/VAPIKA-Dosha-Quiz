@@ -84,15 +84,13 @@ p {
 .modal-content li{
     margin: 2rem 0;
     text-align: left;
-    font-style: italic;
-    list-style-type: circle;
-    font-size: 1.2rem;
+    list-style-type: none;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    padding-bottom: 0.7rem;
+    border-bottom: 2px dotted #9f7e74;
 }
 /* Modal window content text styling */
-.bold-text{
-    font-weight: bold;
-    font-family: "Tenor Sans", sans-serif;
-}
 .italic-text{
     font-style: italic;
 }
@@ -101,6 +99,14 @@ p {
     font-family: "Tenor Sans", sans-serif;
     text-align: center !important;
     line-height: 3rem !important;
+}
+
+.stand-out-text{
+    font-weight: bold;
+    color: #9c8179;
+    font-size: 1.8rem !important;
+    font-family: "Tenor Sans", sans-serif;
+    line-height: 2.3rem !important;
 }
 /* Modal close btn */
 .close-modal-btn-box {
@@ -115,7 +121,7 @@ p {
     cursor: pointer;
 }
 .homepage-modal h1{
-    font-size: 4rem;
+    font-size: 3rem;
 }
 button {
     background-color: #9f7e74;
@@ -351,7 +357,7 @@ footer i {
         font-size: 3rem;
    }
     .container {
-        width: 70%;
+        width: 95%;
    }
     #sign-up-heading {
         font-size: 2.2rem;
