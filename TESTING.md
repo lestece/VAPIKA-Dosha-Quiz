@@ -242,7 +242,7 @@ When I asked the peers on Slack for a review of the website, _Harry_ noticed tha
 
 One error was coming from a SweetAlert2 incorrect script on line 67 of the sign-up.html: easily fixed by deleting it.
 
-The second error was removed by deleting the setInterval method from the swal.fire function: I tried to research and understand what that method was doing in the alert window and its purpose in the function but without success.
+The second error was due to the setInterval method from the swal.fire function: since that method's purpose was to call the function at specified intervals and that wasn't really useful for the SweetAlert window in the website, all that unnecessary code has been removed and the errors in the console fixed.
 - - -
 
 10) Pie Chart responsive only after page refresh 

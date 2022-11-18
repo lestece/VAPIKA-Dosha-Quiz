@@ -26,9 +26,6 @@ function sendMail() {
                         "template_h7twzk8",
                         '#signup-form')
                     .then(function() {
-                        console.log(
-                            'SUCCESS'
-                        );
                         //Get the button element
                         let subscribe =
                             document
@@ -41,9 +38,6 @@ function sendMail() {
                             .getElementById(
                                 'signup-form'
                             );
-                        //reset will clear the form
-                        signupForm
-                            .reset();
                         //If the form is successfully sent:
                         // 1. Store the user name 
                         sessionStorage
@@ -53,8 +47,6 @@ function sendMail() {
                             );
                         // 2. Show a sweetalert sign up confirmation with timer pop up window
                         //Instructions taken from https://sweetalert2.github.io/          
-                        let
-                            timerInterval;
                         Swal.fire({
                             title: 'You have successfully signed up!',
                             html: `Check your Inbox for a confirmation email.
@@ -65,20 +57,7 @@ function sendMail() {
                             didOpen: () => {
                                 Swal
                                     .showLoading();
-                                const
-                                    b =
-                                    Swal
-                                    .getHtmlContainer()
-                                    .querySelector(
-                                        'b'
-                                    );
                             },
-                            willClose: () => {
-                                clearInterval
-                                    (
-                                        timerInterval
-                                    );
-                            }
                         }).then(
                             (
                                 result
@@ -95,13 +74,6 @@ function sendMail() {
                                         "./quiz-results.html";
                                 }
                             });
-                        //If there's an error, it will log "Failed..." and console log the error
-                    }, function(
-                        error) {
-                        console.log(
-                            'FAILED...',
-                            error
-                        );
                     });
             });
 }
