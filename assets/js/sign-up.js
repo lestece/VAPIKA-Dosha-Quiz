@@ -7,7 +7,7 @@
 // Connect to my EmailJS account using my Public Key
 (function() {
     emailjs.init(
-        "-nc1aZVdy7YoJikvg");
+        "VuY9YwdkklaJdg5Mm"); 
 })();
 // Function to call the emailjs.sendForm method
 function sendMail() {
