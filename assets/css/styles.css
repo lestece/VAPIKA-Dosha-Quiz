@@ -79,17 +79,18 @@ p {
 .modal-content p{
     line-height: normal;
     text-align: justify;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
 }
 .modal-content li{
     margin: 2rem 0;
-    text-align: left;
+    text-align: center;
     list-style-type: none;
     font-size: 1.6rem;
-    line-height: 2rem;
+    line-height: 2.3rem;
     padding-bottom: 0.7rem;
     border-bottom: 2px dotted #9f7e74;
 }
+
 /* Modal window content text styling */
 .italic-text{
     font-style: italic;
@@ -103,7 +104,7 @@ p {
 
 .stand-out-text{
     font-weight: bold;
-    color: #9c8179;
+    color: #9c8179 !important;
     font-size: 1.8rem !important;
     font-family: "Tenor Sans", sans-serif;
     line-height: 2.3rem !important;
@@ -296,6 +297,12 @@ footer i {
     font-family: "Tenor Sans", sans-serif !important;
     font-weight: bold !important;
 }
+.dosha-modal h3{
+    font-size: 2rem !important;
+}
+.dosha-modal li{
+    list-style-type: square;
+}
 /* Media queries */
 /* Media queries for large and medium devices (landscape tablets, laptops/desktops 1021 px and down) */
 @media only screen and (max-width: 1021px) {
@@ -371,7 +378,7 @@ footer i {
         font-size: 2.5rem;
    }
     .main-container p {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
    }
     #start-quiz {
         font-size: 1.4rem;
@@ -379,17 +386,25 @@ footer i {
     .dosha-modal h1 {
         font-size: 4rem !important;
    }
-    .homepage-modal h1{
+
+   .dosha-modal p,
+   .dosha-modal li{
+    font-size: 1.4rem;
+   }
+
+   .homepage-modal h1{
         font-size: 2.2rem;
    }
-    .homepage-modal p{
-        font-size: 1.2rem;
-   }
+
+   .stand-out-text{
+    font-size: 1.5rem !important;
+}
     .intro{
         font-size: 1.4rem !important;
    }
     .modal-content p{
         text-align: center;
+        line-height: 2.3rem;
    }
     .sign-up-container {
         padding: 1rem 2rem 2rem;
