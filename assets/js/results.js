@@ -18,7 +18,7 @@ doshaSpan.textContent = dosha;
  * If an username has been submitted with the form, display it along with the dosha results.
  * Otherwise, display the string below with the result only
  */
-if (userName) {
+if (userName.trim().length !== 0) {
     userNameSpan.textContent = `${userName}, `;
 } else {
     resultsHeading.innerHTML = `Your Dosha is <span id="dosha-result">${dosha} </span>!`;
